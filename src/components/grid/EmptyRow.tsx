@@ -1,6 +1,6 @@
-import { Cell } from "./Cell"
+import Cell from "./Cell"
 
-export const EmptyRow = () => {
+const EmptyRow = () => {
   const emptyCells = Array.from(Array(6))
 
   return (
@@ -11,3 +11,5 @@ export const EmptyRow = () => {
     </div>
   )
 }
+
+export default EmptyRow;
