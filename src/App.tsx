@@ -6,12 +6,14 @@ import Keyboard from './components/keyboard/Keyboard';
 function App() {
   return (
     <Div100vh>
-      <div className='h-full text-center text-xl p-5'>
-        <div className='mb-4'>How many employees does Twitter have (rounded)?</div>
-        <div className='flex flex-col pb-6'>
-          <Grid />
+      <div className='flex flex-col h-full p-2'>
+        <div className='text-center text-xl my-2'>How many soldiers are in North Korea's active army? (rounded)</div>
+        <div className='flex grow flex-col max-w-7xl mx-auto'>
+          <div className='flex grow flex-col justify-center pb-6'>
+            <Grid />
+          </div>
+          <Keyboard />
         </div>
-        <Keyboard />
       </div>
     </Div100vh>
   );

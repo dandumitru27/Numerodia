@@ -1,7 +1,7 @@
 import Cell from "./Cell"
 
 const EmptyRow = () => {
-  const emptyCells = Array.from(Array(6))
+  const emptyCells = Array.from(Array(7))
 
   return (
     <div className="flex justify-center mb-1">
