@@ -1,6 +1,6 @@
 import Key from "./Key";
 
-const Keyboard = () => {
+export default function Keyboard() {
   return (
     <div>
       <div className="mb-1.5">
@@ -38,5 +38,3 @@ const Keyboard = () => {
     </div>
   )
 }
-
-export default Keyboard;

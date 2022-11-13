@@ -1,6 +1,6 @@
 import EmptyRow from "./EmptyRow"
 
-const Grid = () => {
+export default function Grid() {
   const emptyRows = Array.from(Array(5))
 
   return (
@@ -11,5 +11,3 @@ const Grid = () => {
     </>
   )
 }
-
-export default Grid;

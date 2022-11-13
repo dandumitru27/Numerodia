@@ -1,15 +1,20 @@
 import Cell from "./Cell"
 
-const EmptyRow = () => {
-  const emptyCells = Array.from(Array(7))
+export default function EmptyRow() {
+  const solutionLength = 7;
+
+  const questionCells = Array.from(Array(3));
+
+  const zeroCells = Array.from(Array(solutionLength - 3));
 
   return (
     <div className="flex justify-center mb-1">
-      {emptyCells.map((_, i) => (
-        <Cell key={i} />
+      {questionCells.map((_, i) => (
+        <Cell key={i} value="?" />
+      ))}
+      {zeroCells.map((_, i) => (
+        <Cell key={i} value="0" />
       ))}
     </div>
   )
 }
-
-export default EmptyRow;
