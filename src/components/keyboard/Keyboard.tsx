@@ -1,24 +1,16 @@
 import Key from "./Key";
 
 type Props = {
-  onChar: (value: string) => void
+  onChar: (value: string) => void,
+  onDelete: () => void,
+  onEnter: () => void
 }
 
 export default function Keyboard({
   onChar,
+  onDelete,
+  onEnter
 }: Props) {
-  const onClick = (value: string) => {
-    // if (value === 'ENTER') {
-    //   onEnter()
-    // } else if (value === 'DELETE') {
-    //   onDelete()
-    // } else {
-    //   onChar(value)
-    // }
-
-    onChar(value);
-  }
-
   return (
     <div>
       <div className="mb-1.5">
@@ -26,7 +18,7 @@ export default function Keyboard({
           <Key
             key={key}
             value={key}
-            onClick={onClick}
+            onClick={onChar}
           />
         ))}
       </div>
@@ -35,7 +27,7 @@ export default function Keyboard({
           <Key
             key={key}
             value={key}
-            onClick={onClick}
+            onClick={onChar}
           />
         ))}
       </div>
@@ -44,18 +36,26 @@ export default function Keyboard({
           <Key
             key={key}
             value={key}
-            onClick={onClick}
+            onClick={onChar}
           />
         ))}
       </div>
       <div className="mb-1.5">
-        {['⌫', '0', '✔️'].map((key) => (
-          <Key
-            key={key}
-            value={key}
-            onClick={onClick}
-          />
-        ))}
+        <Key
+          key='DELETE'
+          value='⌫'
+          onClick={onDelete}
+        />
+        <Key
+          key='0'
+          value='0'
+          onClick={onChar}
+        />
+        <Key
+          key='ENTER'
+          value='✔️'
+          onClick={onEnter}
+        />
       </div>
     </div>
   )
