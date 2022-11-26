@@ -24,7 +24,9 @@ export default function Grid({
       {guesses.map((guess, i) => (
         <CompletedRow key={i} guess={guess} answer={answer} />
       ))}
-      <CurrentRow guess={currentGuess} answer={answer} />
+      {guesses.length < MAX_CHALLENGES && (
+        <CurrentRow guess={currentGuess} answer={answer} />
+      )}
       {emptyRows.map((_, i) => (
         <EmptyRow key={i} answer={answer} />
       ))}

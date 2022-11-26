@@ -1,5 +1,6 @@
 import { DIGITS_TO_GUESS_COUNT } from "../../constants/settings";
 import Cell from "./Cell"
+import Separator from "./Separator";
 
 type Props = {
   answer: number
@@ -15,10 +16,16 @@ export default function EmptyRow({ answer }: Props) {
   return (
     <div className="flex justify-center mb-1">
       {questionCells.map((_, i) => (
-        <Cell key={i} value="?" />
+        <div key={i} className='flex'>
+          <Cell key={i} value="?" />
+          {((answerLength - i - 1) % 3 === 0) && <Separator key={answerLength - i - 1} />}
+        </div>
       ))}
       {zeroCells.map((_, i) => (
-        <Cell key={i} value="0" isTrailingZero={true} />
+        <div key={i} className='flex'>
+          <Cell key={i} value="0" isTrailingZero={true} />
+          {((zeroCells.length - i - 1) % 3 === 0 && i !== zeroCells.length - 1) && <Separator key={zeroCells.length - i - 1} />}
+        </div>
       ))}
     </div>
   )

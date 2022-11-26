@@ -27,7 +27,7 @@ export default function App() {
       return;
     }
 
-    if (guesses.length < MAX_CHALLENGES - 1) {
+    if (guesses.length < MAX_CHALLENGES) {
       setGuesses([...guesses, currentGuess]);
       setCurrentGuess('');
     }
