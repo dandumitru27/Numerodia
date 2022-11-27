@@ -1,7 +1,5 @@
 import { MAX_CHALLENGES } from "../../constants/settings"
-import CompletedRow from "./CompletedRow"
-import CurrentRow from "./CurrentRow"
-import EmptyRow from "./EmptyRow"
+import Row from "./Row"
 
 type Props = {
   answer: number
@@ -22,13 +20,13 @@ export default function Grid({
   return (
     <>
       {guesses.map((guess, i) => (
-        <CompletedRow key={i} guess={guess} answer={answer} />
+        <Row key={i} guess={guess} answer={answer} />
       ))}
       {guesses.length < MAX_CHALLENGES && (
-        <CurrentRow guess={currentGuess} answer={answer} />
+        <Row key={guesses.length} guess={currentGuess} answer={answer} />
       )}
       {emptyRows.map((_, i) => (
-        <EmptyRow key={i} answer={answer} />
+        <Row key={guesses.length + i + 1} guess={''} answer={answer} />
       ))}
     </>
   )
