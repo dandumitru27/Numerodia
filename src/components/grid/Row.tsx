@@ -1,5 +1,6 @@
 import { DIGITS_TO_GUESS_COUNT } from "../../constants/settings";
 import Cell from "./Cell"
+import HintBox from "./HintBox";
 import Separator from "./Separator";
 
 type Props = {
@@ -28,6 +29,7 @@ export default function Row({ guess, answer }: Props) {
           {((cells.length - i - 1) % 3 === 0 && i !== cells.length - 1) && <Separator key={answerLength + i} />}
         </div>
       ))}
+      <HintBox />
     </div>
   )
 }
