@@ -1,4 +1,4 @@
-import { Puzzle } from "../models/puzzle";
+import Puzzle from "../models/Puzzle";
 
 export const puzzles: Array<Puzzle> = [
   {

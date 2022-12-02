@@ -5,6 +5,7 @@ import Keyboard from './components/keyboard/Keyboard';
 import getTodaysPuzzle from './lib/getTodaysPuzzle';
 import { useState } from 'react';
 import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from './constants/settings';
+import evaluateGuess from './lib/evaluateGuess';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
@@ -26,6 +27,9 @@ export default function App() {
     if (currentGuess.length < DIGITS_TO_GUESS_COUNT) {
       return;
     }
+
+    const hint = evaluateGuess(currentGuess, puzzle.answer);
+    console.log(hint);
 
     if (guesses.length < MAX_CHALLENGES) {
       setGuesses([...guesses, currentGuess]);
