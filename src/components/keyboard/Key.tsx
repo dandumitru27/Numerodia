@@ -12,14 +12,14 @@ export default function Key({
   let icon = undefined;
 
   if (value === 'DELETE') {
-    icon = <BackspaceIcon className='h-7 w-7' />;
+    icon = <BackspaceIcon className='h-6 w-6' />;
   } else if (value === "ENTER") {
-    icon = <CheckCircleIcon className='h-7 w-7' />;
+    icon = <CheckCircleIcon className='h-6 w-6' />;
   }
 
   return (
     <button
-      className="w-20 h-11 flex items-center justify-center font-mono text-2xl bg-slate-200 hover:bg-slate-300 mr-1.5 rounded-lg"
+      className="h-10 flex grow flex-row basis-0 items-center justify-center font-mono text-xl bg-slate-200 hover:bg-slate-300 rounded-lg"
       onClick={() => onClick(value)}
     >
       {icon ?? value}

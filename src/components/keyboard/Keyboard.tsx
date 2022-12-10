@@ -13,7 +13,7 @@ export default function Keyboard({
 }: Props) {
   return (
     <div>
-      <div className="flex mb-1.5">
+      <div className="flex gap-1 mb-1">
         {['1', '2', '3'].map((key) => (
           <Key
             key={key}
@@ -22,7 +22,7 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="flex mb-1.5">
+      <div className="flex gap-1 mb-1">
         {['4', '5', '6'].map((key) => (
           <Key
             key={key}
@@ -31,7 +31,7 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="flex mb-1.5">
+      <div className="flex gap-1 mb-1">
         {['7', '8', '9'].map((key) => (
           <Key
             key={key}
@@ -40,7 +40,7 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="flex mb-1.5">
+      <div className="flex gap-1">
         <Key
           key='DELETE'
           value='DELETE'
