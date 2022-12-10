@@ -2,8 +2,8 @@ import Puzzle from "../models/Puzzle";
 
 export const puzzles: Array<Puzzle> = [
   {
-    question: 'How many soldiers are in North Korea\'s active army? (rounded)',
-    answer: 1_280_000,
+    question: 'What was the total compensation of Tripadvisor\'s CEO in 2021? (US dollars, rounded)',
+    answer: 7_670_000,
   },
   {
     question: 'What\'s the population of Dublin? (rounded)',

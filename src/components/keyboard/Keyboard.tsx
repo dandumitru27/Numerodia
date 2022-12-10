@@ -13,7 +13,7 @@ export default function Keyboard({
 }: Props) {
   return (
     <div>
-      <div className="mb-1.5">
+      <div className="flex mb-1.5">
         {['1', '2', '3'].map((key) => (
           <Key
             key={key}
@@ -22,7 +22,7 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="mb-1.5">
+      <div className="flex mb-1.5">
         {['4', '5', '6'].map((key) => (
           <Key
             key={key}
@@ -31,7 +31,7 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="mb-1.5">
+      <div className="flex mb-1.5">
         {['7', '8', '9'].map((key) => (
           <Key
             key={key}
@@ -40,10 +40,10 @@ export default function Keyboard({
           />
         ))}
       </div>
-      <div className="mb-1.5">
+      <div className="flex mb-1.5">
         <Key
           key='DELETE'
-          value='⌫'
+          value='DELETE'
           onClick={onDelete}
         />
         <Key
@@ -53,7 +53,7 @@ export default function Keyboard({
         />
         <Key
           key='ENTER'
-          value='✔️'
+          value='ENTER'
           onClick={onEnter}
         />
       </div>
