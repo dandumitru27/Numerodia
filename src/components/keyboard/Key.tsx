@@ -19,7 +19,7 @@ export default function Key({
 
   return (
     <button
-      className="w-20 h-12 flex items-center justify-center font-mono text-2xl bg-slate-200 hover:bg-slate-300 mr-1.5 rounded-lg"
+      className="w-20 h-11 flex items-center justify-center font-mono text-2xl bg-slate-200 hover:bg-slate-300 mr-1.5 rounded-lg"
       onClick={() => onClick(value)}
     >
       {icon ?? value}
