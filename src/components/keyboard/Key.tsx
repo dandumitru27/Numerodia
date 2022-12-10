@@ -12,9 +12,9 @@ export default function Key({
   let icon = undefined;
 
   if (value === 'DELETE') {
-    icon = <BackspaceIcon className='h-6 w-6' />;
+    icon = <BackspaceIcon className='h-7 w-7' />;
   } else if (value === "ENTER") {
-    icon = <CheckCircleIcon className='h-6 w-6' />;
+    icon = <CheckCircleIcon className='h-7 w-7' />;
   }
 
   return (

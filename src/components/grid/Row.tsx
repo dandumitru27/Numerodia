@@ -1,14 +1,16 @@
 import { DIGITS_TO_GUESS_COUNT } from "../../constants/settings";
+import Hint from "../../models/Hint";
 import Cell from "./Cell"
 import HintBox from "./HintBox";
 import Separator from "./Separator";
 
 type Props = {
   guess: string
-  answer: number
+  answer: number,
+  hint?: Hint
 }
 
-export default function Row({ guess, answer }: Props) {
+export default function Row({ guess, answer, hint }: Props) {
   const answerLength = answer.toString().length;
 
   const cells = Array.from(guess);
@@ -29,7 +31,7 @@ export default function Row({ guess, answer }: Props) {
           {((cells.length - i - 1) % 3 === 0 && i !== cells.length - 1) && <Separator key={answerLength + i} />}
         </div>
       ))}
-      <HintBox />
+      <HintBox hint={hint} />
     </div>
   )
 }

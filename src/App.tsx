@@ -6,12 +6,14 @@ import getTodaysPuzzle from './lib/getTodaysPuzzle';
 import { useState } from 'react';
 import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from './constants/settings';
 import evaluateGuess from './lib/evaluateGuess';
+import Hint from './models/Hint';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
 
   const [currentGuess, setCurrentGuess] = useState('');
   const [guesses, setGuesses] = useState<string[]>([]);
+  const [hints, setHints] = useState<Hint[]>([]);
 
   const onChar = (value: string) => {
     if (currentGuess.length < DIGITS_TO_GUESS_COUNT) {
@@ -30,6 +32,7 @@ export default function App() {
 
     const hint = evaluateGuess(currentGuess, puzzle.answer);
     console.log(hint);
+    setHints([...hints, hint]);
 
     if (guesses.length < MAX_CHALLENGES) {
       setGuesses([...guesses, currentGuess]);
@@ -47,6 +50,7 @@ export default function App() {
               answer={puzzle.answer}
               guesses={guesses}
               currentGuess={currentGuess}
+              hints={hints}
             />
           </div>
           <Keyboard

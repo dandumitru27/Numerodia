@@ -37,7 +37,7 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
     const thresholdFull = threshold * answerMagnitude;
 
     if (Math.abs(answer - guessFull) >= thresholdFull) {
-      hint.arrowCount = Math.floor(Math.log10(threshold)) + 1;
+      hint.arrowCount = threshold >= 100 ? 2 : 1;
 
       const previousThreshold = thresholds[index - 1];
 
@@ -46,11 +46,9 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
       const { numberText: lowerNumber } = getNumberWrittenForm(thresholdFull, threshold);
       const { numberText: upperNumber, magnitude } = getNumberWrittenForm(previousThresholdFull, previousThreshold, true);
 
-      hint.text = hint.arrowCount === 3
+      hint.text = hint.arrowCount === 2
         ? `Way ${comparationText}`
-        : hint.arrowCount === 2
-          ? capitalizeFirstLetter(comparationText)
-          : `A bit ${comparationText}`;
+        : capitalizeFirstLetter(comparationText);
 
       hint.text += `: between ${lowerNumber} and ${upperNumber}${magnitude ?? ''} ${comparationText}.`;
 

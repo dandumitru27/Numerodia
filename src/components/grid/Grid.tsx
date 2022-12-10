@@ -1,16 +1,19 @@
 import { MAX_CHALLENGES } from "../../constants/settings"
+import Hint from "../../models/Hint"
 import Row from "./Row"
 
 type Props = {
   answer: number
   guesses: string[]
-  currentGuess: string
+  currentGuess: string,
+  hints: Hint[]
 }
 
 export default function Grid({
   answer,
   guesses,
   currentGuess,
+  hints
 }: Props) {
   const emptyRows =
     guesses.length < MAX_CHALLENGES - 1
@@ -20,7 +23,7 @@ export default function Grid({
   return (
     <>
       {guesses.map((guess, i) => (
-        <Row key={i} guess={guess} answer={answer} />
+        <Row key={i} guess={guess} answer={answer} hint={hints[i]} />
       ))}
       {guesses.length < MAX_CHALLENGES && (
         <Row key={guesses.length} guess={currentGuess} answer={answer} />
