@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from './constants/settings';
 import evaluateGuess from './lib/evaluateGuess';
 import Hint from './models/Hint';
-import HintBanner from './components/HintBanner';
+import HintBanner from './components/hint-banner/HintBanner';
+import Navbar from './components/navbar/Navbar';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
@@ -59,8 +60,9 @@ export default function App() {
 
   return (
     <Div100vh>
-      <div className='flex flex-col h-full p-2'>
-        <div className='text-center text-xl my-2'>{puzzle.question}</div>
+      <div className='flex flex-col h-full py-2'>
+        <Navbar />
+        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-1 mx-2'>{puzzle.question}</div>
         <div className='flex grow flex-col max-w-7xl mx-auto'>
           <div className='flex grow flex-col justify-center'>
             <Grid

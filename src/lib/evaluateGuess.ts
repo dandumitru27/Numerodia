@@ -50,7 +50,7 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
         ? `Way ${comparationText}`
         : capitalizeFirstLetter(comparationText);
 
-      hint.text += `: between ${lowerNumber} and ${upperNumber}${magnitude ?? ''} ${comparationText}.`;
+      hint.text += `: ${lowerNumber} to ${upperNumber}${magnitude ?? ''} ${comparationText}.`;
 
       break;
     }
@@ -60,12 +60,21 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
 function getNumberWrittenForm(inputNumber: number, threshold: number, isUpperMargin = false): { numberText: string, magnitude?: string } {
   let magnitude = undefined;
 
-  if (isUpperMargin && inputNumber === 1_000_000_000) {
-    if (threshold === 100) {
-      inputNumber = 990_000_000;
-    }
-    else if (threshold === 10) {
-      inputNumber = 900_000_000;
+  if (isUpperMargin) {
+    if (inputNumber === 1_000_000_000) {
+      if (threshold === 100) {
+        inputNumber = 990_000_000;
+      }
+      else if (threshold === 10) {
+        inputNumber = 900_000_000;
+      }
+    } else if (inputNumber === 1_000_000) {
+      if (threshold === 100) {
+        inputNumber = 990_000;
+      }
+      else if (threshold === 10) {
+        inputNumber = 900_000;
+      }
     }
   }
 
