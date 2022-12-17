@@ -35,7 +35,7 @@ export default function App() {
       return;
     }
 
-    const hint = evaluateGuess(currentGuess, puzzle.answer);
+    const hint = evaluateGuess(currentGuess, puzzle.answer, guesses.length + 1);
     setHints([...hints, hint]);
 
     if (guesses.length < MAX_CHALLENGES) {
@@ -62,7 +62,7 @@ export default function App() {
     <Div100vh>
       <div className='flex flex-col h-full py-2'>
         <Navbar />
-        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-1 mx-2'>{puzzle.question}</div>
+        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 mx-2'>{puzzle.question}</div>
         <div className='flex grow flex-col max-w-7xl mx-auto'>
           <div className='flex grow flex-col justify-center'>
             <Grid

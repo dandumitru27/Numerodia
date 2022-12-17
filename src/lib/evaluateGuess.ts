@@ -1,12 +1,12 @@
 import { DIGITS_TO_GUESS_COUNT } from "../constants/settings";
 import Direction from "../enums/Direction";
-import Medal from "../enums/Medal";
+import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
 
 const thresholds = [900, 500, 100, 50, 10, 5, 1];
 const locale = 'en-US';
 
-export default function evaluateGuess(guess: string, answer: number): Hint {
+export default function evaluateGuess(guess: string, answer: number, guessNumber: number): Hint {
   const hint: Hint = {};
 
   const answerMagnitude = Math.pow(10, answer.toString().length - DIGITS_TO_GUESS_COUNT);
@@ -14,7 +14,22 @@ export default function evaluateGuess(guess: string, answer: number): Hint {
   var guessFull = Number(guess) * answerMagnitude;
 
   if (guessFull === answer) {
-    return { text: 'Impressive!', isCorrect: true, medal: Medal.Gold };
+    hint.isCorrect = true;
+
+    hint.text = 'That\'s correct. ';
+
+    if (guessNumber <= 2) {
+      hint.trophy = Trophy.Gold;
+      hint.text += 'Impressive!';
+    } else if (guessNumber <= 4) {
+      hint.trophy = Trophy.Silver;
+      hint.text += 'Awesome!';
+    } else {
+      hint.trophy = Trophy.Bronze;
+      hint.text += 'Well done!';
+    }
+
+    return hint;
   }
 
   if (guessFull < answer) {

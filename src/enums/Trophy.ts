@@ -1,8 +1,8 @@
-enum Medal {
+enum Trophy {
   Gold,
   Silver,
   Bronze,
   Flower
 }
 
-export default Medal;
+export default Trophy;
