@@ -65,10 +65,10 @@ export default function App() {
 
   return (
     <Div100vh>
-      <div className='flex flex-col h-full py-2'>
+      <div className='flex flex-col h-full max-w-sm mx-auto py-2'>
         <Navbar />
-        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 mx-2'>{puzzle.question}</div>
-        <div className='flex grow flex-col max-w-7xl mx-auto'>
+        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>{puzzle.question}</div>
+        <div className='flex grow flex-col px-3'>
           <div className='flex grow flex-col justify-center'>
             <Grid
               answer={puzzle.answer}

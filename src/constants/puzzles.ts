@@ -6,7 +6,7 @@ export const puzzles: Array<Puzzle> = [
     answer: 7_670_000,
   },
   {
-    question: 'What\'s the population of Dublin? (rounded)',
-    answer: 1_170_000,
+    question: 'How much does an iPhone 14 Pro Max, gold plated, cost? (in lei, rounded)',
+    answer: 18_100,
   }
 ]
