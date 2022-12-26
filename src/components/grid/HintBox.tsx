@@ -1,4 +1,4 @@
-import { ChevronDoubleDownIcon, ChevronDoubleUpIcon, ChevronDownIcon, ChevronUpIcon, TrophyIcon } from '@heroicons/react/24/outline'
+import { ChevronDoubleDownIcon, ChevronDoubleUpIcon, ChevronDownIcon, ChevronUpIcon, FaceFrownIcon, TrophyIcon } from '@heroicons/react/24/outline'
 import Direction from '../../enums/Direction'
 import Trophy from '../../enums/Trophy'
 import Hint from '../../models/Hint'
@@ -11,7 +11,11 @@ export default function HintBox({ hint }: Props) {
   let icon = undefined;
   const iconSizeClasses = 'h-6 w-6';
 
-  if (hint && !hint.isCorrect) {
+  if (hint && hint.isGameLost) {
+    icon = <FaceFrownIcon className={iconSizeClasses} />
+  }
+
+  if (hint && !hint.isCorrect && !icon) {
     if (hint.arrowDirection === Direction.Up) {
       const chevronIconClasses = iconSizeClasses + ' text-green-700';
 

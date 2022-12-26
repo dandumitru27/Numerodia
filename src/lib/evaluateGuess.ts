@@ -1,4 +1,4 @@
-import { DIGITS_TO_GUESS_COUNT } from "../constants/settings";
+import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from "../constants/settings";
 import Direction from "../enums/Direction";
 import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
@@ -28,6 +28,13 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
       hint.trophy = Trophy.Bronze;
       hint.text += 'Well done!';
     }
+
+    return hint;
+  }
+
+  if (guessNumber === MAX_CHALLENGES) {
+    hint.isGameLost = true;
+    hint.text = 'Incorrect. Better luck next time!';
 
     return hint;
   }

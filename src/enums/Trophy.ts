@@ -1,8 +1,7 @@
 enum Trophy {
   Gold,
   Silver,
-  Bronze,
-  Flower
+  Bronze
 }
 
 export default Trophy;

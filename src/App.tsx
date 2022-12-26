@@ -16,12 +16,13 @@ export default function App() {
   const [currentGuess, setCurrentGuess] = useState('');
   const [guesses, setGuesses] = useState<string[]>([]);
   const [hints, setHints] = useState<Hint[]>([]);
+  const [isGameWon, setIsGameWon] = useState(false);
 
   const [hintTextBanner, setHintTextBanner] = useState('');
   const [hintSumBanner, setHintSumBanner] = useState('');
 
   const onChar = (value: string) => {
-    if (currentGuess.length < DIGITS_TO_GUESS_COUNT) {
+    if (currentGuess.length < DIGITS_TO_GUESS_COUNT && !isGameWon) {
       setCurrentGuess(`${currentGuess}${value}`);
     }
   }
@@ -44,6 +45,10 @@ export default function App() {
 
       setHintTextBanner(hint.text ?? '');
       setHintSumBanner(`The sum of the digits is ${computeDigitSum(puzzle.answer)}.`);
+
+      if (hint.isCorrect) {
+        setIsGameWon(true);
+      }
     }
   }
 
