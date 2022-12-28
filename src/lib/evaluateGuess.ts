@@ -34,7 +34,7 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
 
   if (guessNumber === MAX_CHALLENGES) {
     hint.isGameLost = true;
-    hint.text = 'Incorrect. Better luck next time!';
+    hint.text = 'Incorrect. Better luck tomorrow!';
 
     return hint;
   }

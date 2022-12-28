@@ -1,4 +1,5 @@
 import { ChevronDoubleDownIcon, ChevronDoubleUpIcon, ChevronDownIcon, ChevronUpIcon, FaceFrownIcon, TrophyIcon } from '@heroicons/react/24/outline'
+import { useEffect, useState } from 'react'
 import Direction from '../../enums/Direction'
 import Trophy from '../../enums/Trophy'
 import Hint from '../../models/Hint'
@@ -8,6 +9,14 @@ type Props = {
 }
 
 export default function HintBox({ hint }: Props) {
+  const [flipInnerTransform, setFlipInnerTransform] = useState('');
+
+  useEffect(() => {
+    if (hint) {
+      setFlipInnerTransform('rotateX(180deg)');
+    }
+  }, []);
+
   let icon = undefined;
   const iconSizeClasses = 'h-6 w-6';
 
@@ -57,8 +66,14 @@ export default function HintBox({ hint }: Props) {
   }
 
   return (
-    <div className='w-9 h-10 flex items-center justify-center rounded ml-3 mr-0.5 bg-slate-100'>
-      {icon}
+    <div className='w-9 h-10 ml-3 mr-0.5 flip-main'>
+      <div className='rounded bg-slate-100 border-2 flip-inner' style={{ transform: flipInnerTransform }}>
+        <div className='flip-front'>
+        </div>
+        <div className='flex items-center justify-center flip-back'>
+          {icon}
+        </div>
+      </div>
     </div>
   )
 }
