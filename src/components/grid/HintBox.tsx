@@ -67,10 +67,13 @@ export default function HintBox({ hint }: Props) {
 
   return (
     <div className='w-9 h-10 ml-3 mr-0.5 flip-main'>
-      <div className='rounded bg-slate-100 border-2 flip-inner' style={{ transform: flipInnerTransform }}>
+      {/* The div below is hidden, it's just to overcome a bug where these custom trophy colors are not displayed properly */}
+      <div className='text-[#F8D000] text-[#C0C0C0] text-[#CD7F32]'></div>
+
+      <div className='w-full h-full rounded bg-slate-50 border-2 flip-inner' style={{ transform: flipInnerTransform }}>
         <div className='flip-front'>
         </div>
-        <div className='flex items-center justify-center flip-back'>
+        <div className='w-full h-full flex items-center justify-center flip-back'>
           {icon}
         </div>
       </div>
