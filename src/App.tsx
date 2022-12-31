@@ -80,6 +80,7 @@ export default function App() {
               guesses={guesses}
               currentGuess={currentGuess}
               hints={hints}
+              isGameWon={isGameWon}
             />
             <HintBanner text={hintTextBanner} />
             <HintBanner text={hintSumBanner} isSumBanner={true} />
