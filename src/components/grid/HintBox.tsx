@@ -15,7 +15,7 @@ export default function HintBox({ hint }: Props) {
     if (hint) {
       setFlipInnerTransform('rotateX(180deg)');
     }
-  }, []);
+  }, [hint]);
 
   let icon = undefined;
   const iconSizeClasses = 'h-6 w-6';
@@ -66,7 +66,7 @@ export default function HintBox({ hint }: Props) {
   }
 
   return (
-    <div className='w-9 h-10 ml-3 mr-0.5 flip-main'>
+    <div className='w-9 h-10 ml-3 mr-0.5' style={{ perspective: '100px' }}>
       {/* The div below is hidden, it's just to overcome a bug where these custom trophy colors are not displayed properly */}
       <div className='text-[#F8D000] text-[#C0C0C0] text-[#CD7F32]'></div>
 

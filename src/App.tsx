@@ -43,7 +43,12 @@ export default function App() {
       setGuesses([...guesses, currentGuess]);
       setCurrentGuess('');
 
+      if (hintTextBanner === hint.text) {
+        hint.text += ' '; // to trigger the Hint Text Banner flip
+      }
+
       setHintTextBanner(hint.text ?? '');
+
       setHintSumBanner(`The sum of the digits is ${computeDigitSum(puzzle.answer)}.`);
 
       if (hint.isCorrect) {
@@ -77,7 +82,7 @@ export default function App() {
               hints={hints}
             />
             <HintBanner text={hintTextBanner} />
-            <HintBanner text={hintSumBanner} />
+            <HintBanner text={hintSumBanner} isSumBanner={true} />
           </div>
           <Keyboard
             onChar={onChar}

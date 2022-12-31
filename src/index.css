@@ -6,10 +6,6 @@ body {
   margin: 0;
 }
 
-.flip-main {
-  perspective: 100px;
-}
-
 .flip-inner {
   transition: transform 1s;
   transform-style: preserve-3d;
