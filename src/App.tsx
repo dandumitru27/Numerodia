@@ -9,6 +9,7 @@ import evaluateGuess from './lib/evaluateGuess';
 import Hint from './models/Hint';
 import HintBanner from './components/hint-banner/HintBanner';
 import Navbar from './components/navbar/Navbar';
+import LargerTextModal from './components/modals/LargerTextModal';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
@@ -20,6 +21,9 @@ export default function App() {
 
   const [hintTextBanner, setHintTextBanner] = useState('');
   const [hintSumBanner, setHintSumBanner] = useState('');
+
+  const [isLargerTextModalOpen, setIsLargerTextModalOpen] = useState(false);
+  const [modalText, setModalText] = useState('');
 
   const onChar = (value: string) => {
     if (currentGuess.length < DIGITS_TO_GUESS_COUNT && !isGameWon) {
@@ -68,11 +72,26 @@ export default function App() {
     return sum;
   }
 
+  const handleHintButtonClick = () => {
+    setModalText(puzzle.hint ?? '');
+    setIsLargerTextModalOpen(true);
+  }
+
   return (
     <Div100vh>
       <div className='flex flex-col h-full max-w-sm mx-auto py-2'>
         <Navbar />
-        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>{puzzle.question}</div>
+        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>
+          <span>{puzzle.question}
+            {puzzle.hint &&
+              <button
+                className='ml-2 px-3 text-sm font-normal border-2 rounded-full bg-slate-50'
+                onClick={handleHintButtonClick}>
+                Hint
+              </button>
+            }
+          </span>
+        </div>
         <div className='flex grow flex-col px-3'>
           <div className='flex grow flex-col justify-center'>
             <Grid
@@ -89,6 +108,11 @@ export default function App() {
             onChar={onChar}
             onDelete={onDelete}
             onEnter={onEnter}
+          />
+          <LargerTextModal
+            text={modalText}
+            isOpen={isLargerTextModalOpen}
+            handleClose={() => setIsLargerTextModalOpen(false)}
           />
         </div>
       </div>

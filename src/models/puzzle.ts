@@ -1,4 +1,5 @@
 export default interface Puzzle {
   question: string,
-  answer: number
+  answer: number,
+  hint?: string
 }

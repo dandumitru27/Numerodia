@@ -46,7 +46,7 @@ export default function HintBanner({
 
   const flipInnerTransition = !isSumBanner
     ? 'transform 1s ease 0.5s'
-    : 'transform 1s ease 1s';
+    : 'transform 1s ease 1.5s';
 
   return (
     <div className="h-7 mt-2 mx-8" style={{ perspective: '200px' }}>
