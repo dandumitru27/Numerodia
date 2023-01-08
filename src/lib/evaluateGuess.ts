@@ -3,7 +3,7 @@ import Direction from "../enums/Direction";
 import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
 
-const thresholds = [900, 500, 100, 50, 10, 5, 1];
+const thresholds = [90, 50, 10, 5, 1];
 const locale = 'en-US';
 
 export default function evaluateGuess(guess: string, answer: number, guessNumber: number): Hint {
@@ -21,7 +21,7 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
     if (guessNumber <= 2) {
       hint.trophy = Trophy.Gold;
       hint.text += 'Impressive!';
-    } else if (guessNumber <= 4) {
+    } else if (guessNumber === 3) {
       hint.trophy = Trophy.Silver;
       hint.text += 'Awesome!';
     } else {
@@ -59,7 +59,7 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
     const thresholdFull = threshold * answerMagnitude;
 
     if (Math.abs(answer - guessFull) >= thresholdFull) {
-      hint.arrowCount = threshold >= 100 ? 2 : 1;
+      hint.arrowCount = threshold >= 10 ? 2 : 1;
 
       const previousThreshold = thresholds[index - 1];
 
@@ -84,19 +84,9 @@ function getNumberWrittenForm(inputNumber: number, threshold: number, isUpperMar
 
   if (isUpperMargin) {
     if (inputNumber === 1_000_000_000) {
-      if (threshold === 100) {
-        inputNumber = 990_000_000;
-      }
-      else if (threshold === 10) {
-        inputNumber = 900_000_000;
-      }
+      inputNumber = 900_000_000;
     } else if (inputNumber === 1_000_000) {
-      if (threshold === 100) {
-        inputNumber = 990_000;
-      }
-      else if (threshold === 10) {
-        inputNumber = 900_000;
-      }
+      inputNumber = 900_000;
     }
   }
 

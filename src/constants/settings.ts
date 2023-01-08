@@ -1,2 +1,2 @@
-export const MAX_CHALLENGES = 5;
-export const DIGITS_TO_GUESS_COUNT = 3;
+export const MAX_CHALLENGES = 4;
+export const DIGITS_TO_GUESS_COUNT = 2;

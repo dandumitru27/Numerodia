@@ -17,7 +17,7 @@ export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
   const cells = Array.from(guess);
 
   let cellToHighlightIndex = -1;
-  if (isCurrentRow && cells.length < 3) {
+  if (isCurrentRow && cells.length < DIGITS_TO_GUESS_COUNT) {
     cellToHighlightIndex = cells.length;
   }
 

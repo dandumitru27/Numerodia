@@ -20,6 +20,12 @@ export default function HintBanner({
 
   useEffect(() => {
     if (text) {
+      // don't flip the Sum Banner on the last attempt
+      if (isSumBanner && text === ' ') {
+        setTextBack(text);
+        return;
+      }
+
       if (!isBackShown) {
         setTextFront('');
         setFlipFrontClasses('');

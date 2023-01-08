@@ -53,7 +53,7 @@ export default function App() {
 
       setHintTextBanner(hint.text ?? '');
 
-      setHintSumBanner(`The sum of the digits is ${computeDigitSum(puzzle.answer)}.`);
+      setHintSumBanner(hint.isCorrect || hint.isGameLost ? ' ' : `The sum of the digits is ${computeDigitSum(puzzle.answer)}.`);
 
       if (hint.isCorrect) {
         setIsGameWon(true);

@@ -8,11 +8,11 @@ export const puzzles: Array<Puzzle> = [
   },
   {
     question: 'How many passengers can Wonder of the Seas, the largest cruise ship in the world, carry? (rounded)',
-    answer: 6_980,
-    hint: 'The Titanic could carry 2,435 passengers.',
+    answer: 6_900,
+    hint: 'The Titanic could carry 2,400 passengers.',
   },
   {
     question: 'How much does one night in a double room at Radisson Blu Brasov cost? (in lei)',
-    answer: 873,
+    answer: 870,
   }
 ]
