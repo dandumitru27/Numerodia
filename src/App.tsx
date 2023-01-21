@@ -19,8 +19,8 @@ export default function App() {
   const [hints, setHints] = useState<Hint[]>([]);
   const [isGameWon, setIsGameWon] = useState(false);
 
-  const [hintTextBanner, setHintTextBanner] = useState('');
-  const [hintSumBanner, setHintSumBanner] = useState('');
+  const [hintBanner1Text, setHintBanner1Text] = useState('');
+  const [hintBanner2Text, setHintBanner2Text] = useState('');
 
   const [isLargerTextModalOpen, setIsLargerTextModalOpen] = useState(false);
   const [modalText, setModalText] = useState('');
@@ -47,17 +47,46 @@ export default function App() {
       setGuesses([...guesses, currentGuess]);
       setCurrentGuess('');
 
-      if (hintTextBanner === hint.text) {
+      if (hintBanner1Text === hint.text) {
         hint.text += ' '; // to trigger the Hint Text Banner flip
       }
 
-      setHintTextBanner(hint.text ?? '');
+      setHintBanner1Text(hint.text ?? '');
 
-      setHintSumBanner(hint.isCorrect || hint.isGameLost ? ' ' : `The sum of the digits is ${computeDigitSum(puzzle.answer)}.`);
+      setHintBanner2Text(hint.isCorrect || hint.isGameLost ? ' ' : getHintBanner2Text());
 
       if (hint.isCorrect) {
         setIsGameWon(true);
       }
+    }
+  }
+
+  const getHintBanner2Text = (): string => {
+    const firstDigit = getDigitAtIndex(0);
+
+    if (firstDigit < 3) {
+      return getParityText();
+    } else {
+      return `The sum of the digits is ${computeDigitSum(puzzle.answer)}.`;
+    }
+  }
+
+  const getDigitAtIndex = (index: number): number => {
+    const digitStr = String(puzzle.answer)[index];
+    return Number(digitStr);
+  }
+
+  const getParityText = (): string => {
+    const firstDigit = getDigitAtIndex(0);
+    const secondDigit = getDigitAtIndex(1);
+
+    const firstDigitParity = firstDigit % 2 === 0 ? 'even' : 'odd';
+    const secondDigitParity = secondDigit % 2 === 0 ? 'even' : 'odd';
+
+    if (firstDigitParity === secondDigitParity) {
+      return `The first two digits are ${secondDigitParity}.`
+    } else {
+      return `The second digit is ${secondDigitParity}.`
     }
   }
 
@@ -101,8 +130,8 @@ export default function App() {
               hints={hints}
               isGameWon={isGameWon}
             />
-            <HintBanner text={hintTextBanner} />
-            <HintBanner text={hintSumBanner} isSumBanner={true} />
+            <HintBanner text={hintBanner1Text} />
+            <HintBanner text={hintBanner2Text} isBanner2={true} />
           </div>
           <Keyboard
             onChar={onChar}

@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 type Props = {
   text: string,
-  isSumBanner?: boolean
+  isBanner2?: boolean
 }
 
 export default function HintBanner({
   text,
-  isSumBanner = false
+  isBanner2: isBanner2 = false
 }: Props) {
   const [flipInnerTransform, setFlipInnerTransform] = useState('');
   const [flipFrontClasses, setFlipFrontClasses] = useState('');
@@ -21,7 +21,7 @@ export default function HintBanner({
   useEffect(() => {
     if (text) {
       // don't flip the Sum Banner on the last attempt
-      if (isSumBanner && text === ' ') {
+      if (isBanner2 && text === ' ') {
         setTextBack(text);
         return;
       }
@@ -50,7 +50,7 @@ export default function HintBanner({
     // eslint-disable-next-line
   }, [text]);
 
-  const flipInnerTransition = !isSumBanner
+  const flipInnerTransition = !isBanner2
     ? 'transform 1s ease 0.5s'
     : 'transform 1s ease 1.5s';
 
