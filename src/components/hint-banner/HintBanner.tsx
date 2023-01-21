@@ -55,8 +55,8 @@ export default function HintBanner({
     : 'transform 1s ease 1.5s';
 
   return (
-    <div className="h-7 mt-2 mx-8" style={{ perspective: '200px' }}>
-      <div className="h-full rounded-lg bg-slate-50 text-sm text-slate-500 border-[1px] border-slate-300 flip-inner"
+    <div className="h-8 mt-2 mx-6" style={{ perspective: '200px' }}>
+      <div className="h-full rounded-lg bg-slate-50 text-slate-500 border-[1px] border-slate-300 flip-inner"
         style={{ transition: flipInnerTransition, transform: flipInnerTransform }}>
         <div className={'flex items-center justify-center flip-front' + flipFrontClasses}>
           {textFront}
