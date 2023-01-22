@@ -7,7 +7,7 @@ type Props = {
 
 export default function HintBanner({
   text,
-  isBanner2: isBanner2 = false
+  isBanner2 = false
 }: Props) {
   const [flipInnerTransform, setFlipInnerTransform] = useState('');
   const [flipFrontClasses, setFlipFrontClasses] = useState('');
