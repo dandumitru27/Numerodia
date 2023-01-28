@@ -1,7 +1,7 @@
 import { ChevronDoubleDownIcon, ChevronDoubleUpIcon, ChevronDownIcon, ChevronUpIcon, FaceFrownIcon, TrophyIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
 import Direction from '../../enums/Direction'
-import Trophy from '../../enums/Trophy'
+import getTrophyColor from '../../lib/trophies'
 import Hint from '../../models/Hint'
 
 type Props = {
@@ -45,20 +45,7 @@ export default function HintBox({ hint }: Props) {
   }
 
   if (hint && hint.isCorrect) {
-    let trophyColor: string;
-
-    switch (hint.trophy) {
-      case Trophy.Gold:
-        trophyColor = '#F8D000';
-        break;
-      case Trophy.Silver:
-        trophyColor = '#C0C0C0';
-        break;
-      case Trophy.Bronze:
-      default:
-        trophyColor = '#CD7F32';
-        break;
-    }
+    let trophyColor = getTrophyColor(hint.trophy);
 
     const trophyIconClasses = iconSizeClasses + ` text-[${trophyColor}]`;
 
