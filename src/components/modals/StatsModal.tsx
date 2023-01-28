@@ -1,33 +1,73 @@
 import { Dialog } from "@headlessui/react"
-import { FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { LOCALE } from "../../constants/settings"
 import Trophy from "../../enums/Trophy"
-import getTrophyColor, { getTrophyCountFromStats } from "../../lib/trophies"
+import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from "../../lib/trophies"
 import GameStats from "../../models/GameStats"
+import Hint from "../../models/Hint"
 import BaseModal from "./BaseModal"
 
 type Props = {
   isOpen: boolean,
   handleClose: () => void,
-  gameStats: GameStats
+  gameStats: GameStats,
+  lastHint?: Hint,
+  answer: number
 }
 
 export default function StatsModal({
   isOpen,
   handleClose,
-  gameStats
+  gameStats,
+  lastHint,
+  answer
 }: Props) {
+  let gameResult;
+
+  if (lastHint?.isCorrect || lastHint?.isGameLost) {
+    let icon;
+    let message1: string;
+    let message2: string;
+
+    const iconSizeClasses = 'h-14 w-14 mr-2';
+
+    if (lastHint.isCorrect && lastHint.trophy !== undefined) {
+      let trophyColor = getTrophyColor(lastHint.trophy);
+
+      const iconClasses = iconSizeClasses + ` text-[${trophyColor}]`;
+
+      icon = <TrophyIcon className={iconClasses} />;
+
+      message1 = getTrophyExclamation(lastHint.trophy);
+      message2 = `You won the ${Trophy[lastHint.trophy].toLowerCase()} trophy.`
+    } else {
+      icon = <FaceFrownIcon className={iconSizeClasses} />
+
+      message1 = 'Incorrect.';
+      message2 = `The answer is ${answer.toLocaleString(LOCALE)}.`;
+    }
+
+    gameResult =
+      <div className="flex mb-7">
+        {icon}
+        <div className="mt-2">{message1}<br />{message2}</div>
+      </div>;
+  }
 
   return (
     <BaseModal
       isOpen={isOpen}
       handleClose={handleClose}
     >
-      <Dialog.Description className="mt-4">
+      <div className="mt-4">
+        {gameResult}
+        <div className="text-xl mb-2">Statistics</div>
         <StatsLine trophy={Trophy.Gold} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Silver} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Bronze} gameStats={gameStats} />
         <StatsLine gameStats={gameStats} />
-      </Dialog.Description>
+        {gameResult && <div className="mt-7">Come back for another question <span className="font-bold">tomorrow</span>.</div>}
+      </div>
     </BaseModal>
   )
 }

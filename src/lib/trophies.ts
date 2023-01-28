@@ -22,3 +22,16 @@ export function getTrophyCountFromStats(trophy: Trophy, gameStats: GameStats) {
       return gameStats.bronzeTrophies;
   }
 }
+
+export function getTrophyExclamation(trophy?: Trophy): string {
+  switch (trophy) {
+    case Trophy.Gold:
+      return 'Impressive!';
+    case Trophy.Silver:
+      return 'Awesome!';
+    case Trophy.Bronze:
+      return 'Well done!';
+    default:
+      return '';
+  }
+}

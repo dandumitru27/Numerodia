@@ -1,10 +1,9 @@
-import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from "../constants/settings";
+import { DIGITS_TO_GUESS_COUNT, LOCALE, MAX_CHALLENGES } from "../constants/settings";
 import Direction from "../enums/Direction";
 import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
 
 const thresholds = [90, 50, 10, 5, 1];
-const locale = 'en-US';
 
 export default function evaluateGuess(guess: string, answer: number, guessNumber: number): Hint {
   const hint: Hint = {};
@@ -65,8 +64,8 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
 
       const previousThresholdFull = previousThreshold * answerMagnitude;
 
-      const { numberText: lowerNumber } = getNumberWrittenForm(thresholdFull, threshold);
-      const { numberText: upperNumber, magnitude } = getNumberWrittenForm(previousThresholdFull, previousThreshold, true);
+      const { numberText: lowerNumber } = getNumberWrittenForm(thresholdFull);
+      const { numberText: upperNumber, magnitude } = getNumberWrittenForm(previousThresholdFull, true);
 
       hint.text = hint.arrowCount === 2
         ? `Way ${comparationText}`
@@ -79,7 +78,7 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
   }
 }
 
-function getNumberWrittenForm(inputNumber: number, threshold: number, isUpperMargin = false): { numberText: string, magnitude?: string } {
+function getNumberWrittenForm(inputNumber: number, isUpperMargin = false): { numberText: string, magnitude?: string } {
   let magnitude = undefined;
 
   if (isUpperMargin) {
@@ -99,7 +98,7 @@ function getNumberWrittenForm(inputNumber: number, threshold: number, isUpperMar
     magnitude = " millions";
   }
 
-  return { numberText: inputNumber.toLocaleString(locale), magnitude };
+  return { numberText: inputNumber.toLocaleString(LOCALE), magnitude };
 }
 
 function capitalizeFirstLetter(input: string): string {

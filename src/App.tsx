@@ -18,7 +18,9 @@ export default function App() {
 
   const [currentGuess, setCurrentGuess] = useState('');
   const [guesses, setGuesses] = useState<string[]>([]);
+
   const [hints, setHints] = useState<Hint[]>([]);
+  const [lastHint, setLastHint] = useState<Hint>();
 
   const [isGameWon, setIsGameWon] = useState(false);
   const [isGameLost, setIsGameLost] = useState(false);
@@ -49,6 +51,7 @@ export default function App() {
 
     const hint = evaluateGuess(currentGuess, puzzle.answer, guesses.length + 1);
     setHints([...hints, hint]);
+    setLastHint(hint);
 
     if (guesses.length < MAX_CHALLENGES) {
       setGuesses([...guesses, currentGuess]);
@@ -170,6 +173,8 @@ export default function App() {
             isOpen={isStatsModalOpen}
             handleClose={() => setIsStatsModalOpen(false)}
             gameStats={stats}
+            lastHint={lastHint}
+            answer={puzzle.answer}
           />
         </div>
       </div>
