@@ -33,7 +33,13 @@ export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
     <div className="flex justify-center mb-1">
       {cells.map((cellValue, i) => (
         <div key={i} className='flex'>
-          <Cell key={i} value={cellValue} isTrailingZero={i >= DIGITS_TO_GUESS_COUNT} highlight={i === cellToHighlightIndex} />
+          <Cell
+            key={i}
+            value={cellValue}
+            isTrailingZero={i >= DIGITS_TO_GUESS_COUNT}
+            highlight={i === cellToHighlightIndex}
+            answer={answer}
+          />
           {((cells.length - i - 1) % 3 === 0 && i !== cells.length - 1) && <Separator key={answerLength + i} />}
         </div>
       ))}
