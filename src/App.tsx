@@ -12,14 +12,15 @@ import Navbar from './components/navbar/Navbar';
 import LargerTextModal from './components/modals/LargerTextModal';
 import StatsModal from './components/modals/StatsModal';
 import { addStatsForCompletedGame, loadStats } from './lib/stats';
+import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorage } from './lib/localStorage';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
 
   const [currentGuess, setCurrentGuess] = useState('');
-  const [guesses, setGuesses] = useState<string[]>([]);
 
   const [hints, setHints] = useState<Hint[]>([]);
+
   const [lastHint, setLastHint] = useState<Hint>();
 
   const [isGameWon, setIsGameWon] = useState(false);
@@ -45,7 +46,10 @@ export default function App() {
   }
 
   const onEnter = () => {
-    if (currentGuess.length < DIGITS_TO_GUESS_COUNT) {
+    if (
+      currentGuess.length < DIGITS_TO_GUESS_COUNT ||
+      guesses.length >= MAX_CHALLENGES
+    ) {
       return;
     }
 
@@ -53,29 +57,31 @@ export default function App() {
     setHints([...hints, hint]);
     setLastHint(hint);
 
-    if (guesses.length < MAX_CHALLENGES) {
-      setGuesses([...guesses, currentGuess]);
-      setCurrentGuess('');
+    setGuesses([...guesses, currentGuess]);
+    setCurrentGuess('');
 
-      if (hintBanner1Text === hint.text) {
-        hint.text += ' '; // to trigger the Hint Text Banner flip
-      }
+    reactToLastHint(hint);
 
-      setHintBanner1Text(hint.text ?? '');
+    if (hint.isCorrect || hint.isGameLost) {
+      setStats(addStatsForCompletedGame(stats, hint));
+    }
+  }
 
-      setHintBanner2Text(hint.isCorrect || hint.isGameLost ? ' ' : getHintBanner2Text());
+  const reactToLastHint = (hint: Hint) => {
+    if (hintBanner1Text === hint.text) {
+      hint.text += ' '; // to trigger the Hint Text Banner flip
+    }
 
-      if (hint.isCorrect) {
-        setIsGameWon(true);
-      }
+    setHintBanner1Text(hint.text ?? '');
 
-      if (hint.isGameLost) {
-        setIsGameLost(true);
-      }
+    setHintBanner2Text(hint.isCorrect || hint.isGameLost ? ' ' : getHintBanner2Text());
 
-      if (hint.isCorrect || hint.isGameLost) {
-        setStats(addStatsForCompletedGame(stats, hint));
-      }
+    if (hint.isCorrect) {
+      setIsGameWon(true);
+    }
+
+    if (hint.isGameLost) {
+      setIsGameLost(true);
     }
   }
 
@@ -126,6 +132,39 @@ export default function App() {
 
     return sum;
   }
+
+  const [guesses, setGuesses] = useState<string[]>(() => {
+    const loaded = loadCurrentGameStateFromLocalStorage()
+
+    if (loaded?.question !== puzzle.question) {
+      return [];
+    }
+
+    if (loaded.hints) {
+      setHints(loaded.hints);
+
+      if (loaded.hints.length >= 1) {
+        var lastHint = loaded.hints[loaded.hints.length - 1];
+
+        setLastHint(lastHint);
+
+        reactToLastHint(lastHint);
+      }
+    }
+
+    return loaded.guesses;
+  })
+
+  useEffect(() => {
+    if (!guesses || guesses.length === 0) {
+      return;
+    }
+
+    const question = puzzle.question;
+    saveCurrentGameStateToLocalStorage({ guesses, hints, question })
+    // eslint-disable for a warning pointing to put hints and question in the effect dependencies, which would complicate things
+    // eslint-disable-next-line
+  }, [guesses])
 
   const handleHintButtonClick = () => {
     setModalText(puzzle.hint ?? '');
