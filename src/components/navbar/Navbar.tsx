@@ -1,10 +1,12 @@
-import { ChartBarIcon } from "@heroicons/react/24/outline";
+import { ChartBarIcon, InformationCircleIcon } from "@heroicons/react/24/outline";
 
 type Props = {
+  setIsInfoModalOpen: (value: boolean) => void,
   setIsStatsModalOpen: (value: boolean) => void
 }
 
 export default function Navbar({
+  setIsInfoModalOpen,
   setIsStatsModalOpen
 }: Props) {
   return (
@@ -15,8 +17,12 @@ export default function Navbar({
           <span className="text-slate-300">.com</span>
         </div>
         <div className="flex mt-0.5">
+          <InformationCircleIcon
+            className="h-6 w-6 mr-3 cursor-pointer"
+            onClick={() => setIsInfoModalOpen(true)}
+          />
           <ChartBarIcon
-            className="h-5 w-5 cursor-pointer"
+            className="h-6 w-6 cursor-pointer"
             onClick={() => setIsStatsModalOpen(true)}
           />
         </div>

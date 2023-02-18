@@ -59,7 +59,7 @@ export default function StatsModal({
       isOpen={isOpen}
       handleClose={handleClose}
     >
-      <div className="mt-4">
+      <div className="mt-2">
         {gameResult}
         <div className="text-xl mb-2">Statistics</div>
         <StatsLine trophy={Trophy.Gold} gameStats={gameStats} />

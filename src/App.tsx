@@ -4,7 +4,7 @@ import Grid from './components/grid/Grid';
 import Keyboard from './components/keyboard/Keyboard';
 import getTodaysPuzzle from './lib/getTodaysPuzzle';
 import { useEffect, useState } from 'react';
-import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from './constants/settings';
+import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES, WELCOME_INFO_MODAL_MS } from './constants/settings';
 import evaluateGuess from './lib/evaluateGuess';
 import Hint from './models/Hint';
 import HintBanner from './components/hint-banner/HintBanner';
@@ -13,6 +13,7 @@ import LargerTextModal from './components/modals/LargerTextModal';
 import StatsModal from './components/modals/StatsModal';
 import { addStatsForCompletedGame, loadStats } from './lib/stats';
 import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorage } from './lib/localStorage';
+import InfoModal from './components/modals/InfoModal';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
@@ -34,6 +35,7 @@ export default function App() {
 
   const [stats, setStats] = useState(() => loadStats());
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   const onChar = (value: string) => {
     if (currentGuess.length < DIGITS_TO_GUESS_COUNT && !isGameWon) {
@@ -84,6 +86,14 @@ export default function App() {
       setIsGameLost(true);
     }
   }
+
+  useEffect(() => {
+    if (!loadCurrentGameStateFromLocalStorage()) {
+      setTimeout(() => {
+        setIsInfoModalOpen(true)
+      }, WELCOME_INFO_MODAL_MS)
+    }
+  }, [])
 
   useEffect(() => {
     if (isGameWon || isGameLost) {
@@ -174,7 +184,10 @@ export default function App() {
   return (
     <Div100vh>
       <div className='flex flex-col h-full max-w-sm mx-auto py-2'>
-        <Navbar setIsStatsModalOpen={setIsStatsModalOpen} />
+        <Navbar
+          setIsInfoModalOpen={setIsInfoModalOpen}
+          setIsStatsModalOpen={setIsStatsModalOpen}
+        />
         <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>
           <span>{puzzle.question}
             {puzzle.hint &&
@@ -207,6 +220,10 @@ export default function App() {
             text={modalText}
             isOpen={isLargerTextModalOpen}
             handleClose={() => setIsLargerTextModalOpen(false)}
+          />
+          <InfoModal
+            isOpen={isInfoModalOpen}
+            handleClose={() => setIsInfoModalOpen(false)}
           />
           <StatsModal
             isOpen={isStatsModalOpen}
