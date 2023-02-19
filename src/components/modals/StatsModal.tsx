@@ -1,4 +1,3 @@
-import { Dialog } from "@headlessui/react"
 import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { LOCALE } from "../../constants/settings"
 import Trophy from "../../enums/Trophy"

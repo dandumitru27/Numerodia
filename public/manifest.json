@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Numerodia",
+  "name": "Numerodia - Guess the daily number",
   "icons": [
     {
       "src": "favicon.ico",
