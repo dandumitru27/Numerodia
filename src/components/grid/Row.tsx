@@ -29,6 +29,8 @@ export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
     cells.push('0');
   }
 
+  const useLargeCells = window.outerHeight >= 700 && answer < 100_000;
+
   return (
     <div className="flex justify-center mb-1">
       {cells.map((cellValue, i) => (
@@ -38,12 +40,13 @@ export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
             value={cellValue}
             isTrailingZero={i >= DIGITS_TO_GUESS_COUNT}
             highlight={i === cellToHighlightIndex}
+            useLargeCells={useLargeCells}
             answer={answer}
           />
           {((cells.length - i - 1) % 3 === 0 && i !== cells.length - 1) && <Separator key={answerLength + i} />}
         </div>
       ))}
-      <HintBox hint={hint} />
+      <HintBox hint={hint} useLargeCells={useLargeCells} />
     </div>
   )
 }

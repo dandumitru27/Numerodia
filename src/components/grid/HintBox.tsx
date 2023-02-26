@@ -5,10 +5,11 @@ import getTrophyColor from '../../lib/trophies'
 import Hint from '../../models/Hint'
 
 type Props = {
-  hint?: Hint
+  hint?: Hint,
+  useLargeCells: boolean
 }
 
-export default function HintBox({ hint }: Props) {
+export default function HintBox({ hint, useLargeCells }: Props) {
   const [flipInnerTransform, setFlipInnerTransform] = useState('');
 
   useEffect(() => {
@@ -17,8 +18,15 @@ export default function HintBox({ hint }: Props) {
     }
   }, [hint]);
 
+  let boxSizeClasses = 'w-9 h-10';
+  let iconSizeClasses = 'h-6 w-6';
+
+  if (useLargeCells) {
+    boxSizeClasses = 'w-12 h-14';
+    iconSizeClasses = 'h-8 w-8';
+  }
+
   let icon = undefined;
-  const iconSizeClasses = 'h-6 w-6';
 
   if (hint && hint.isGameLost) {
     icon = <FaceFrownIcon className={iconSizeClasses} />
@@ -52,8 +60,10 @@ export default function HintBox({ hint }: Props) {
     icon = <TrophyIcon className={trophyIconClasses} />;
   }
 
+  var boxClasses = boxSizeClasses + ' ml-3 mr-0.5';
+
   return (
-    <div className='w-9 h-10 ml-3 mr-0.5' style={{ perspective: '100px' }}>
+    <div className={boxClasses} style={{ perspective: '100px' }}>
       {/* The div below is hidden, it's just to overcome a bug where these custom trophy colors are not displayed properly */}
       <div className='text-[#F8D000] text-[#C0C0C0] text-[#CD7F32]'></div>
 

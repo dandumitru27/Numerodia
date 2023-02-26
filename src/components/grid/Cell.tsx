@@ -2,6 +2,7 @@ type Props = {
   value?: string,
   isTrailingZero?: boolean,
   highlight?: boolean,
+  useLargeCells: boolean,
   answer: number
 }
 
@@ -9,9 +10,11 @@ export default function Cell({
   value,
   isTrailingZero,
   highlight,
+  useLargeCells,
   answer
 }: Props) {
   var widthClass = 'w-9';
+  var heightClass = 'h-10';
   var textSizeClass = 'text-2xl';
 
   if (answer >= 1_000_000) {
@@ -23,7 +26,13 @@ export default function Cell({
     textSizeClass = 'text-xl';
   }
 
-  var classes = widthClass + ' ' + textSizeClass + ' h-10 flex items-center justify-center border-2 font-bold rounded mx-0.5';
+  if (useLargeCells) {
+    widthClass = 'w-12';
+    heightClass = 'h-14';
+    textSizeClass = 'text-3xl';
+  }
+
+  var classes = `${widthClass} ${heightClass} ${textSizeClass} flex items-center justify-center border-2 font-bold rounded mx-0.5`;
 
   let borderColor = 'border-slate-300';
   if (highlight) {
