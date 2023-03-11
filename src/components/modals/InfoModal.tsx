@@ -1,4 +1,5 @@
 import { Dialog } from "@headlessui/react"
+import { useTranslation } from "react-i18next"
 import BaseModal from "./BaseModal"
 
 type Props = {
@@ -10,6 +11,7 @@ export default function InfoModal({
   isOpen,
   handleClose
 }: Props) {
+  const { t } = useTranslation();
 
   return (
     <BaseModal
@@ -20,7 +22,7 @@ export default function InfoModal({
         as="h3"
         className="text-lg font-medium text-center text-gray-900"
       >
-        How to play
+        {t('How to play')}
       </Dialog.Title>
       <div className="mt-3 text-justify text-gray-600">
         <div>

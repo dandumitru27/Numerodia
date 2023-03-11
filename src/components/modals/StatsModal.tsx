@@ -1,4 +1,5 @@
 import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { useTranslation } from "react-i18next"
 import { LOCALE } from "../../constants/settings"
 import Trophy from "../../enums/Trophy"
 import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from "../../lib/trophies"
@@ -21,6 +22,8 @@ export default function StatsModal({
   lastHint,
   answer
 }: Props) {
+  const { t } = useTranslation();
+
   let gameResult;
 
   if (lastHint?.isCorrect || lastHint?.isGameLost) {
@@ -60,7 +63,7 @@ export default function StatsModal({
     >
       <div className="mt-2">
         {gameResult}
-        <div className="text-xl mb-2">Statistics</div>
+        <div className="text-xl mb-2">{t('Statistics')}</div>
         <StatsLine trophy={Trophy.Gold} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Silver} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Bronze} gameStats={gameStats} />
@@ -80,6 +83,21 @@ function StatsLine({
   trophy,
   gameStats
 }: LineProps) {
+  const { t, i18n } = useTranslation();
+
+  const getStatsLineText = (count: number) => {
+    const trophyNoun = t(count === 1 ? 'trophy' : 'trophies');
+    const trophyType = t(Trophy[trophy!].toLowerCase());
+
+    switch (i18n.language) {
+      case 'ro':
+        return trophyNoun + ' de ' + trophyType;
+      case 'en':
+      default:
+        return trophyType + ' ' + trophyNoun;
+    }
+  }
+
   let icon;
   let count: number;
   let text: string;
@@ -95,9 +113,7 @@ function StatsLine({
 
     count = getTrophyCountFromStats(trophy, gameStats);
 
-    let trophyName = Trophy[trophy].toLowerCase();
-
-    text = trophyName + ' ' + getTrophyNoun(count);
+    text = getStatsLineText(count);
   } else {
     const iconClasses = iconSizeClasses + ' text-red-400'
 
@@ -105,7 +121,7 @@ function StatsLine({
 
     count = gameStats.currentStreak;
 
-    text = 'streak';
+    text = t('streak');
   }
 
   return (
@@ -115,8 +131,4 @@ function StatsLine({
       <span className="mt-1.5">{text}</span>
     </div>
   )
-}
-
-const getTrophyNoun = (count: number) => {
-  return count === 1 ? 'trophy' : 'trophies';
 }

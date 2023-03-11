@@ -14,6 +14,7 @@ import StatsModal from './components/modals/StatsModal';
 import { addStatsForCompletedGame, loadStats } from './lib/stats';
 import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorage } from './lib/localStorage';
 import InfoModal from './components/modals/InfoModal';
+import './i18n/config';
 
 export default function App() {
   const puzzle = getTodaysPuzzle();
