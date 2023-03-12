@@ -1,6 +1,6 @@
 import Puzzle from "../models/Puzzle";
 
-export const puzzles: Array<Puzzle> = [
+export const puzzlesEN: Array<Puzzle> = [
   {
     question: 'What\'s the population of Romania now? (rounded)',
     answer: 19_000_000,
