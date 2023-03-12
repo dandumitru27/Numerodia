@@ -1,9 +1,14 @@
 {
+  "After each try you will receive helpful hints.": "După fiecare încercare vrei primi indicii ajutătoare.",
   "Awesome": "Foarte bine",
   "bronze": "bronz",
   "Come back for another question": "Întoarce-te pentru o nouă întrebare",
+  "Every day there is a new question.": "În fiecare zi apare o nouă întrebare.",
   "gold": "aur",
+  "Good luck!": "Mult succes!",
   "How to play": "Cum se joacă",
+  "If the number is large, you only have to guess the first two digits, the rest are considered zeros.":
+    "Dacă numărul este mare, e de ajuns să ghicești doar primele două cifre, restul sunt considerate zerouri.",
   "Impressive": "Impresionant",
   "Incorrect": "Incorect",
   "silver": "argint",
@@ -14,5 +19,8 @@
   "trophy": "trofeu",
   "trophies": "trofee",
   "Well done": "Bravo",
+  "When you guess the number, you will get a trophy, depending on how many tries it took you.":
+    "Dacă ghicești numărul vei primi un trofeu, în funcție de câte încercări ai folosit.",
+  "You need to guess the number that answers today's question in four tries.": "Trebuie să ghicești răspunsul la întrebarea zilei din patru încercări.",
   "You won": "Ai câștigat"
 }

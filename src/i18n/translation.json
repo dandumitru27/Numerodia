@@ -1,9 +1,14 @@
 {
+  "After each try you will receive helpful hints.": "After each try you will receive helpful hints.",
   "Awesome": "Awesome",
   "bronze": "bronze",
   "Come back for another question": "Come back for another question",
+  "Every day there is a new question.": "Every day there is a new question.",
   "gold": "gold",
+  "Good luck!": "Good luck!",
   "How to play": "How to play",
+  "If the number is large, you only have to guess the first two digits, the rest are considered zeros.":
+    "If the number is large, you only have to guess the first two digits, the rest are considered zeros.",
   "Impressive": "Impressive",
   "Incorrect": "Incorrect",
   "silver": "silver",
@@ -14,5 +19,8 @@
   "trophy": "trophy",
   "trophies": "trophies",
   "Well done": "Well done",
+  "When you guess the number, you will get a trophy, depending on how many tries it took you.":
+    "When you guess the number, you will get a trophy, depending on how many tries it took you.",
+  "You need to guess the number that answers today's question in four tries.": "You need to guess the number that answers today's question in four tries.",
   "You won": "You won"
 }

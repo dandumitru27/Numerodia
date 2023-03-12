@@ -26,22 +26,22 @@ export default function InfoModal({
       </Dialog.Title>
       <div className="mt-3 text-justify text-gray-600">
         <div>
-          You need to guess the number that answers today's question in four tries.
+          {t('You need to guess the number that answers today\'s question in four tries.')}
         </div>
         <div className="mt-3">
-          If the number is large, you only have to guess the first two digits, the rest are considered zeros.
+          {t('If the number is large, you only have to guess the first two digits, the rest are considered zeros.')}
         </div>
         <div className="mt-3">
-          After each try you will receive helpful hints.
+          {t('After each try you will receive helpful hints.')}
         </div>
         <div className="mt-3">
-          When you guess the number, you will get a trophy, depending on how many tries it took you.
+          {t('When you guess the number, you will get a trophy, depending on how many tries it took you.')}
         </div>
         <div className="mt-3">
-          Every day there is a new question.
+          {t('Every day there is a new question.')}
         </div>
         <div className="mt-3">
-          Good luck!
+          {t('Good luck!')}
         </div>
       </div>
     </BaseModal>
