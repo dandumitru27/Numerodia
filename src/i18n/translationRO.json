@@ -1,10 +1,18 @@
 {
+  "Awesome": "Foarte bine",
   "bronze": "bronz",
+  "Come back for another question": "Întoarce-te pentru o nouă întrebare",
   "gold": "aur",
   "How to play": "Cum se joacă",
+  "Impressive": "Impresionant",
+  "Incorrect": "Incorect",
   "silver": "argint",
   "Statistics": "Statistici",
   "streak": "consecutive",
+  "The answer is": "Răspunsul corect e",
+  "tomorrow": "mâine",
   "trophy": "trofeu",
-  "trophies": "trofee"
+  "trophies": "trofee",
+  "Well done": "Bravo",
+  "You won": "Ai câștigat"
 }

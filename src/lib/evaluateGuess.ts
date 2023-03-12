@@ -2,6 +2,7 @@ import { DIGITS_TO_GUESS_COUNT, LOCALE, MAX_CHALLENGES } from "../constants/sett
 import Direction from "../enums/Direction";
 import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
+import { getTrophyExclamation } from "./trophies";
 
 const thresholds = [90, 50, 10, 5, 1];
 
@@ -19,14 +20,13 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
 
     if (guessNumber <= 2) {
       hint.trophy = Trophy.Gold;
-      hint.text += 'Impressive!';
     } else if (guessNumber === 3) {
       hint.trophy = Trophy.Silver;
-      hint.text += 'Awesome!';
     } else {
       hint.trophy = Trophy.Bronze;
-      hint.text += 'Well done!';
     }
+
+    hint.text += getTrophyExclamation(hint.trophy);
 
     return hint;
   }

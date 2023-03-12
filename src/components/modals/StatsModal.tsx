@@ -1,7 +1,7 @@
 import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { useTranslation } from "react-i18next"
-import { LOCALE } from "../../constants/settings"
 import Trophy from "../../enums/Trophy"
+import { getNumberFormatted, getStatsLineText, getStreakText, getYouWonMessage } from "../../i18n/translate-methods"
 import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from "../../lib/trophies"
 import GameStats from "../../models/GameStats"
 import Hint from "../../models/Hint"
@@ -41,12 +41,12 @@ export default function StatsModal({
       icon = <TrophyIcon className={iconClasses} />;
 
       message1 = getTrophyExclamation(lastHint.trophy);
-      message2 = `You won the ${Trophy[lastHint.trophy].toLowerCase()} trophy.`
+      message2 = getYouWonMessage(lastHint.trophy);
     } else {
       icon = <FaceFrownIcon className={iconSizeClasses} />
 
-      message1 = 'Incorrect.';
-      message2 = `The answer is ${answer.toLocaleString(LOCALE)}.`;
+      message1 = t('Incorrect') + '.';
+      message2 = t('The answer is') + ' ' + getNumberFormatted(answer) + '.';
     }
 
     gameResult =
@@ -68,7 +68,7 @@ export default function StatsModal({
         <StatsLine trophy={Trophy.Silver} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Bronze} gameStats={gameStats} />
         <StatsLine gameStats={gameStats} />
-        {gameResult && <div className="mt-7">Come back for another question <span className="font-bold">tomorrow</span>.</div>}
+        {gameResult && <div className="mt-7">{t('Come back for another question')} <span className="font-bold">{t('tomorrow')}</span>.</div>}
       </div>
     </BaseModal>
   )
@@ -83,21 +83,6 @@ function StatsLine({
   trophy,
   gameStats
 }: LineProps) {
-  const { t, i18n } = useTranslation();
-
-  const getStatsLineText = (count: number) => {
-    const trophyNoun = t(count === 1 ? 'trophy' : 'trophies');
-    const trophyType = t(Trophy[trophy!].toLowerCase());
-
-    switch (i18n.language) {
-      case 'ro':
-        return trophyNoun + ' de ' + trophyType;
-      case 'en':
-      default:
-        return trophyType + ' ' + trophyNoun;
-    }
-  }
-
   let icon;
   let count: number;
   let text: string;
@@ -113,7 +98,7 @@ function StatsLine({
 
     count = getTrophyCountFromStats(trophy, gameStats);
 
-    text = getStatsLineText(count);
+    text = getStatsLineText(trophy, count);
   } else {
     const iconClasses = iconSizeClasses + ' text-red-400'
 
@@ -121,7 +106,7 @@ function StatsLine({
 
     count = gameStats.currentStreak;
 
-    text = t('streak');
+    text = getStreakText(count);
   }
 
   return (

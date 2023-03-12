@@ -1,5 +1,6 @@
 import Trophy from "../enums/Trophy";
 import GameStats from "../models/GameStats";
+import { t } from 'i18next';
 
 export default function getTrophyColor(trophy?: Trophy) {
   switch (trophy) {
@@ -24,14 +25,19 @@ export function getTrophyCountFromStats(trophy: Trophy, gameStats: GameStats) {
 }
 
 export function getTrophyExclamation(trophy?: Trophy): string {
+  let exclamation = '';
+
   switch (trophy) {
     case Trophy.Gold:
-      return 'Impressive!';
+      exclamation = 'Impressive';
+      break;
     case Trophy.Silver:
-      return 'Awesome!';
+      exclamation = 'Awesome';
+      break;
     case Trophy.Bronze:
-      return 'Well done!';
-    default:
-      return '';
+      exclamation = 'Well done';
+      break;
   }
+
+  return t(exclamation) + '!';
 }

@@ -1,10 +1,18 @@
 {
+  "Awesome": "Awesome",
   "bronze": "bronze",
+  "Come back for another question": "Come back for another question",
   "gold": "gold",
   "How to play": "How to play",
+  "Impressive": "Impressive",
+  "Incorrect": "Incorrect",
   "silver": "silver",
   "Statistics": "Statistics",
   "streak": "streak",
+  "The answer is": "The answer is",
+  "tomorrow": "tomorrow",
   "trophy": "trophy",
-  "trophies": "trophies"
+  "trophies": "trophies",
+  "Well done": "Well done",
+  "You won": "You won"
 }
