@@ -2,7 +2,7 @@ import Puzzle from "../models/Puzzle";
 
 export const puzzlesRO: Array<Puzzle> = [
   {
-    question: 'Care e populația oficială a României acum? (rotunjită)',
+    question: 'Care este populația oficială a României acum? (rotunjită)',
     answer: 19_000_000,
     hint: 'În 1989 era 23 de milioane.',
   },

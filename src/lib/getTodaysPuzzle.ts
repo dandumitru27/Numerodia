@@ -7,16 +7,15 @@ const firstGameDateRO = new Date(2023, 2, 11); // 2 is March
 const firstGameDateEN = new Date(2023, 2, 11);
 
 export default function getTodaysPuzzle() {
-  switch (i18next.language) {
-    case 'ro':
-      const differenceRO = differenceInDays(startOfToday(), firstGameDateRO);
-      console.log(differenceRO);
+  let puzzles = puzzlesEN;
+  let firstGameDate = firstGameDateEN;
 
-      return puzzlesRO[differenceRO % puzzlesRO.length];
-    case 'en':
-    default:
-      const differenceEN = differenceInDays(startOfToday(), firstGameDateEN);
-
-      return puzzlesEN[differenceEN % puzzlesEN.length];
+  if (i18next.language === 'ro') {
+    puzzles = puzzlesRO;
+    firstGameDate = firstGameDateRO;
   }
+
+  const difference = differenceInDays(startOfToday(), firstGameDate);
+
+  return puzzles[difference % puzzles.length];
 }

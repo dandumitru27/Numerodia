@@ -14,7 +14,6 @@ export const resources = {
 
 i18next.use(initReactI18next).init({
   lng: 'ro',
-  debug: true,
   resources,
   interpolation: {
     escapeValue: false

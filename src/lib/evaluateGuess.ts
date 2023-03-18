@@ -1,8 +1,10 @@
-import { DIGITS_TO_GUESS_COUNT, LOCALE, MAX_CHALLENGES } from "../constants/settings";
+import { DIGITS_TO_GUESS_COUNT, MAX_CHALLENGES } from "../constants/settings";
 import Direction from "../enums/Direction";
 import Trophy from "../enums/Trophy";
 import Hint from "../models/Hint";
 import { getTrophyExclamation } from "./trophies";
+import i18next, { t } from 'i18next';
+import { getNumberFormatted } from "../i18n/translate-methods";
 
 const thresholds = [90, 50, 10, 5, 1];
 
@@ -16,7 +18,7 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
   if (guessFull === answer) {
     hint.isCorrect = true;
 
-    hint.text = 'That\'s correct. ';
+    hint.text = t('That\'s correct') + '. ';
 
     if (guessNumber <= 2) {
       hint.trophy = Trophy.Gold;
@@ -33,7 +35,7 @@ export default function evaluateGuess(guess: string, answer: number, guessNumber
 
   if (guessNumber === MAX_CHALLENGES) {
     hint.isGameLost = true;
-    hint.text = 'Incorrect. Better luck tomorrow!';
+    hint.text = t('Incorrect') + '. ' + t('Better luck tomorrow') + '!';
 
     return hint;
   }
@@ -67,11 +69,27 @@ function computeHintText(answer: number, guessFull: number, answerMagnitude: num
       const { numberText: lowerNumber } = getNumberWrittenForm(thresholdFull);
       const { numberText: upperNumber, magnitude } = getNumberWrittenForm(previousThresholdFull, true);
 
-      hint.text = hint.arrowCount === 2
-        ? `Way ${comparationText}`
-        : capitalizeFirstLetter(comparationText);
+      // EN: 'More: 10 to 50 millions more.'
+      // RO: 'Mai mult cu 10 până la 50 de milioane.'
+      hint.text = capitalizeFirstLetter(t(comparationText));
 
-      hint.text += `: ${lowerNumber} to ${upperNumber}${magnitude ?? ''} ${comparationText}.`;
+      if (i18next.language === "en" && hint.arrowCount === 2) {
+        hint.text = 'Way ' + comparationText;
+      }
+
+      if (i18next.language === "en") {
+        hint.text += ': ';
+      } else if (i18next.language === "ro") {
+        hint.text += ' cu ';
+      }
+
+      hint.text += lowerNumber + ' ' + t('to') + ' ' + upperNumber + (magnitude ?? '');
+
+      if (i18next.language === "en") {
+        hint.text += ' ' + comparationText;
+      }
+
+      hint.text += '.'
 
       break;
     }
@@ -91,14 +109,24 @@ function getNumberWrittenForm(inputNumber: number, isUpperMargin = false): { num
 
   if (inputNumber >= 1_000_000_000) {
     inputNumber = inputNumber / 1_000_000_000;
-    magnitude = " billions";
+    magnitude = "billions";
   }
   else if (inputNumber >= 1_000_000) {
     inputNumber = inputNumber / 1_000_000;
-    magnitude = " millions";
+    magnitude = "millions";
   }
 
-  return { numberText: inputNumber.toLocaleString(LOCALE), magnitude };
+  if (magnitude) {
+    let prefix = ' ';
+
+    if (inputNumber >= 20 && i18next.language === "ro") {
+      prefix += 'de ';
+    }
+
+    magnitude = prefix + t(magnitude);
+  }
+
+  return { numberText: getNumberFormatted(inputNumber), magnitude };
 }
 
 function capitalizeFirstLetter(input: string): string {

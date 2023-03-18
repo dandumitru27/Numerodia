@@ -14,11 +14,13 @@ import StatsModal from './components/modals/StatsModal';
 import { addStatsForCompletedGame, loadStats } from './lib/stats';
 import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorage } from './lib/localStorage';
 import InfoModal from './components/modals/InfoModal';
+import { useTranslation } from 'react-i18next';
 import './i18n/config';
 
 export default function App() {
-  const puzzle = getTodaysPuzzle();
+  const { t, i18n } = useTranslation();
 
+  const [puzzle] = useState(() => getTodaysPuzzle());
   const [currentGuess, setCurrentGuess] = useState('');
 
   const [hints, setHints] = useState<Hint[]>([]);
@@ -39,6 +41,11 @@ export default function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   const onChar = (value: string) => {
+    // 0 not allowed as first digit
+    if (value === '0' && currentGuess.length === 0) {
+      return;
+    }
+
     if (currentGuess.length < DIGITS_TO_GUESS_COUNT && !isGameWon) {
       setCurrentGuess(`${currentGuess}${value}`);
     }
@@ -77,7 +84,7 @@ export default function App() {
 
     setHintBanner1Text(hint.text ?? '');
 
-    setHintBanner2Text(hint.isCorrect || hint.isGameLost ? ' ' : getHintBanner2Text());
+    setHintBanner2Text((hint.isCorrect || hint.isGameLost) ? ' ' : getHintBanner2Text(hint));
 
     if (hint.isCorrect) {
       setIsGameWon(true);
@@ -87,6 +94,12 @@ export default function App() {
       setIsGameLost(true);
     }
   }
+
+  useEffect(() => {
+    if (i18n.language === 'ro') {
+      document.title = "RO.Numerodia - Ghicește numărul zilei";
+    }
+  }, []);
 
   useEffect(() => {
     if (!loadCurrentGameStateFromLocalStorage()) {
@@ -104,44 +117,23 @@ export default function App() {
     }
   }, [isGameWon, isGameLost])
 
-  const getHintBanner2Text = (): string => {
-    const firstDigit = getDigitAtIndex(0);
+  const getHintBanner2Text = (hint: Hint): string => {
+    let digit = getDigitAtIndex(0);
+    let text = t('The first digit is');
 
-    if (firstDigit < 3) {
-      return getParityText();
-    } else {
-      return `The sum of the digits is ${computeDigitSum(puzzle.answer)}.`;
+    if (hint.arrowCount === 1) {
+      digit = getDigitAtIndex(1);
+      text = t('The second digit is');
     }
+
+    const digitParity = digit % 2 === 0 ? 'even' : 'odd';
+
+    return text + ' ' + t(digitParity) + '.';
   }
 
   const getDigitAtIndex = (index: number): number => {
     const digitStr = String(puzzle.answer)[index];
     return Number(digitStr);
-  }
-
-  const getParityText = (): string => {
-    const firstDigit = getDigitAtIndex(0);
-    const secondDigit = getDigitAtIndex(1);
-
-    const firstDigitParity = firstDigit % 2 === 0 ? 'even' : 'odd';
-    const secondDigitParity = secondDigit % 2 === 0 ? 'even' : 'odd';
-
-    if (firstDigitParity === secondDigitParity) {
-      return `The first two digits are ${secondDigitParity}.`
-    } else {
-      return `The second digit is ${secondDigitParity}.`
-    }
-  }
-
-  const computeDigitSum = (input: number): number => {
-    let sum = 0;
-
-    while (input) {
-      sum += input % 10;
-      input = Math.floor(input / 10);
-    }
-
-    return sum;
   }
 
   const [guesses, setGuesses] = useState<string[]>(() => {
@@ -173,7 +165,7 @@ export default function App() {
 
     const question = puzzle.question;
     saveCurrentGameStateToLocalStorage({ guesses, hints, question })
-    // eslint-disable for a warning pointing to put hints and question in the effect dependencies, which would complicate things
+    // eslint-disable for a warning pointing out to put hints and question in the effect dependencies, which would only complicate things
     // eslint-disable-next-line
   }, [guesses])
 
@@ -195,7 +187,7 @@ export default function App() {
               <button
                 className='ml-2 px-3 text-sm font-normal border-2 rounded-full bg-slate-50'
                 onClick={handleHintButtonClick}>
-                Hint
+                {t('Hint')}
               </button>
             }
           </span>
