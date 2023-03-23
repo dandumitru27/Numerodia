@@ -43,6 +43,9 @@ export default function InfoModal({
         <div className="mt-3">
           {t('Good luck!')}
         </div>
+        <div className="mt-3 border-t-2 pt-3 text-sm">
+          {t('Numerodia was created by Dan Dumitru in Brasov, Romania. Some game mechanics were borrowed from the wonderful game Wordle.')}
+        </div>
       </div>
     </BaseModal>
   )
