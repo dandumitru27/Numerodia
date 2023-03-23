@@ -8,10 +8,11 @@ type Props = {
   guess: string
   answer: number,
   hint?: Hint,
-  isCurrentRow?: boolean
+  isCurrentRow?: boolean,
+  onClick?: (value: string) => void
 }
 
-export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
+export default function Row({ guess, answer, hint, isCurrentRow, onClick }: Props) {
   const answerLength = answer.toString().length;
 
   const cells = Array.from(guess);
@@ -46,7 +47,7 @@ export default function Row({ guess, answer, hint, isCurrentRow }: Props) {
           {((cells.length - i - 1) % 3 === 0 && i !== cells.length - 1) && <Separator key={answerLength + i} />}
         </div>
       ))}
-      <HintBox hint={hint} useLargeCells={useLargeCells} />
+      <HintBox hint={hint} useLargeCells={useLargeCells} onClick={(text) => onClick && onClick(text)} />
     </div>
   )
 }

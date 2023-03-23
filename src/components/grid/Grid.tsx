@@ -7,7 +7,8 @@ type Props = {
   guesses: string[]
   currentGuess: string,
   hints: Hint[],
-  isGameWon: boolean
+  isGameWon: boolean,
+  onClick: (value: string) => void
 }
 
 export default function Grid({
@@ -15,7 +16,8 @@ export default function Grid({
   guesses,
   currentGuess,
   hints,
-  isGameWon
+  isGameWon,
+  onClick
 }: Props) {
   const emptyRows =
     guesses.length < MAX_CHALLENGES - 1
@@ -25,7 +27,7 @@ export default function Grid({
   return (
     <>
       {guesses.map((guess, i) => (
-        <Row key={i} guess={guess} answer={answer} hint={hints[i]} />
+        <Row key={i} guess={guess} answer={answer} hint={hints[i]} onClick={(text) => onClick(text)} />
       ))}
       {guesses.length < MAX_CHALLENGES && (
         <Row key={guesses.length} guess={currentGuess} answer={answer} isCurrentRow={!isGameWon} />

@@ -6,10 +6,11 @@ import Hint from '../../models/Hint'
 
 type Props = {
   hint?: Hint,
-  useLargeCells: boolean
+  useLargeCells: boolean,
+  onClick: (value: string) => void
 }
 
-export default function HintBox({ hint, useLargeCells }: Props) {
+export default function HintBox({ hint, useLargeCells, onClick }: Props) {
   const [flipInnerTransform, setFlipInnerTransform] = useState('');
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function HintBox({ hint, useLargeCells }: Props) {
   var boxClasses = boxSizeClasses + ' ml-3 mr-0.5';
 
   return (
-    <div className={boxClasses} style={{ perspective: '100px' }}>
+    <div className={boxClasses} style={{ perspective: '100px' }} onClick={() => onClick(hint?.text ?? '')}>
       {/* The div below is hidden, it's just to overcome a bug where these custom trophy colors are not displayed properly */}
       <div className='text-[#F8D000] text-[#C0C0C0] text-[#CD7F32]'></div>
 

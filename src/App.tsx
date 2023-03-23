@@ -99,7 +99,7 @@ export default function App() {
     if (i18n.language === 'ro') {
       document.title = "RO.Numerodia - Ghicește numărul zilei";
     }
-  }, []);
+  }, [i18n.language]);
 
   useEffect(() => {
     if (!loadCurrentGameStateFromLocalStorage()) {
@@ -169,8 +169,8 @@ export default function App() {
     // eslint-disable-next-line
   }, [guesses])
 
-  const handleHintButtonClick = () => {
-    setModalText(puzzle.hint ?? '');
+  const openLargerTextModal = (text: string) => {
+    setModalText(text);
     setIsLargerTextModalOpen(true);
   }
 
@@ -182,11 +182,12 @@ export default function App() {
           setIsStatsModalOpen={setIsStatsModalOpen}
         />
         <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>
-          <span>{puzzle.question}
+          <span>
+            <span onClick={() => openLargerTextModal(puzzle.question)}>{puzzle.question}</span>
             {puzzle.hint &&
               <button
                 className='ml-2 px-3 text-sm font-normal border-2 rounded-full bg-slate-50'
-                onClick={handleHintButtonClick}>
+                onClick={() => openLargerTextModal(puzzle.hint ?? '')}>
                 {t('Hint')}
               </button>
             }
@@ -200,9 +201,10 @@ export default function App() {
               currentGuess={currentGuess}
               hints={hints}
               isGameWon={isGameWon}
+              onClick={(text) => openLargerTextModal(text)}
             />
-            <HintBanner text={hintBanner1Text} />
-            <HintBanner text={hintBanner2Text} isBanner2={true} />
+            <HintBanner text={hintBanner1Text} onClick={(text) => openLargerTextModal(text)} />
+            <HintBanner text={hintBanner2Text} onClick={(text) => openLargerTextModal(text)} isBanner2={true} />
           </div>
           <Keyboard
             onChar={onChar}
