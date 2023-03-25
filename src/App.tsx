@@ -155,7 +155,7 @@ export default function App() {
       }
     }
 
-    return loaded?.guesses;
+    return loaded?.guesses ?? [];
   })
 
   useEffect(() => {
