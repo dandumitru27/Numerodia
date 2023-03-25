@@ -143,7 +143,7 @@ export default function App() {
       return [];
     }
 
-    if (loaded.hints) {
+    if (loaded?.hints) {
       setHints(loaded.hints);
 
       if (loaded.hints.length >= 1) {
@@ -155,7 +155,7 @@ export default function App() {
       }
     }
 
-    return loaded.guesses;
+    return loaded?.guesses;
   })
 
   useEffect(() => {
