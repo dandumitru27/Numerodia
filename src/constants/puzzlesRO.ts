@@ -38,11 +38,6 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'E aproximativ de 30 de ori diametrul Pământului.',
   },
   {
-    question: 'Cât valorau activele administrate de Credit Suisse la sfârșitul lui 2022, în miliarde de franci elvețieni?',
-    answer: 1_300,
-    hint: 'Raiffeisen Elveția avea în 2022 active administrate în valoare de 238 de miliarde de franci elvețieni.',
-  },
-  {
     question: 'Care e populația Uniunii Europene? (rotunjită)',
     answer: 440_000_000
   }
