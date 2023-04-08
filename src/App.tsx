@@ -95,6 +95,19 @@ export default function App() {
     }
   }
 
+  // redirect from the www version to the one without www
+  useEffect(() => {
+    const currentUrl = window.location.href;
+
+    const wwwStart = 'www.';
+
+    if (currentUrl.includes(wwwStart)) {
+      const urlWithoutWww = currentUrl.replace(wwwStart, '');
+
+      window.location.replace(urlWithoutWww);
+    }
+  }, []);
+
   useEffect(() => {
     if (i18n.language === 'ro') {
       document.title = "RO.Numerodia - Ghicește numărul zilei";
