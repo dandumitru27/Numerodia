@@ -3,7 +3,7 @@ import { puzzlesRO } from '../constants/puzzlesRO';
 import { puzzlesEN } from "../constants/puzzlesEN";
 import i18next from 'i18next';
 
-const firstGameDateRO = new Date(2023, 2, 25); // 2 is March
+const firstGameDateRO = new Date(2023, 3, 19); // 3 is April
 const firstGameDateEN = new Date(2023, 2, 11);
 
 export default function getTodaysPuzzle() {
@@ -15,7 +15,7 @@ export default function getTodaysPuzzle() {
     firstGameDate = firstGameDateRO;
   }
 
-  const difference = differenceInDays(startOfToday(), firstGameDate);
+  const difference = Math.abs(differenceInDays(startOfToday(), firstGameDate));
 
   return puzzles[difference % puzzles.length];
 }
