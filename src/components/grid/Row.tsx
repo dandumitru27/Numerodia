@@ -30,7 +30,7 @@ export default function Row({ guess, answer, hint, isCurrentRow, onClick }: Prop
     cells.push('0');
   }
 
-  const useLargeCells = window.outerHeight >= 700 && answer < 100_000;
+  const useLargeCells = window.screen.height >= 800 && answer < 100_000;
 
   return (
     <div className="flex justify-center mb-1">
