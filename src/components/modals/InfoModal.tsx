@@ -1,4 +1,5 @@
 import { Dialog } from "@headlessui/react"
+import { CalculatorIcon, CalendarDaysIcon, ChevronDoubleUpIcon, QuestionMarkCircleIcon, SparklesIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { useTranslation } from "react-i18next"
 import BaseModal from "./BaseModal"
 
@@ -13,6 +14,8 @@ export default function InfoModal({
 }: Props) {
   const { t } = useTranslation();
 
+  const iconClasses = 'h-6 w-6 inline pb-1 mr-1';
+
   return (
     <BaseModal
       isOpen={isOpen}
@@ -26,21 +29,27 @@ export default function InfoModal({
       </Dialog.Title>
       <div className="mt-3 text-justify text-gray-600">
         <div>
+          <QuestionMarkCircleIcon className={iconClasses + ' text-blue-500'} />
           {t('You need to guess the number that answers today\'s question in four tries.')}
         </div>
         <div className="mt-3">
+          <CalculatorIcon className={iconClasses + ' text-orange-700'} />
           {t('If the number is large, you only have to guess the first two digits, the rest are considered zeros.')}
         </div>
         <div className="mt-3">
+          <ChevronDoubleUpIcon className={iconClasses + ' text-green-700'} />
           {t('After each try you will receive helpful hints.')}
         </div>
         <div className="mt-3">
+          <TrophyIcon className={iconClasses + ' text-[#F8D000]'} />
           {t('When you guess the number, you will get a trophy, depending on how many tries it took you.')}
         </div>
         <div className="mt-3">
+          <CalendarDaysIcon className={iconClasses + ' text-fuchsia-700'} />
           {t('Every day there is a new question.')}
         </div>
         <div className="mt-3">
+          <SparklesIcon className={iconClasses + ' text-lime-500'} />
           {t('Good luck!')}
         </div>
         <div className="mt-3 border-t-2 pt-3 text-sm">
