@@ -32,6 +32,7 @@ export default function App() {
 
   const [hintBanner1Text, setHintBanner1Text] = useState('');
   const [hintBanner2Text, setHintBanner2Text] = useState('');
+  const [hintBannerTextSizeClass, setHintBannerTextSizeClass] = useState('');
 
   const [isLargerTextModalOpen, setIsLargerTextModalOpen] = useState(false);
   const [modalText, setModalText] = useState('');
@@ -78,6 +79,13 @@ export default function App() {
   }
 
   const reactToLastHint = (hint: Hint) => {
+    let textSizeClass = '';
+    if (hint.text && hint.text.length > 34) { // 34 is the length of 'Mai mult cu 10.000 până la 50.000.'
+      textSizeClass = ' text-sm';
+    }
+
+    setHintBannerTextSizeClass(textSizeClass);
+
     if (hintBanner1Text === hint.text) {
       hint.text += ' '; // to trigger the Hint Text Banner flip
     }
@@ -216,8 +224,17 @@ export default function App() {
               isGameWon={isGameWon}
               onClick={(text) => openLargerTextModal(text)}
             />
-            <HintBanner text={hintBanner1Text} onClick={(text) => openLargerTextModal(text)} />
-            <HintBanner text={hintBanner2Text} onClick={(text) => openLargerTextModal(text)} isBanner2={true} />
+            <HintBanner
+              text={hintBanner1Text}
+              textSizeClass={hintBannerTextSizeClass}
+              onClick={(text) => openLargerTextModal(text)}
+            />
+            <HintBanner
+              text={hintBanner2Text}
+              textSizeClass={hintBannerTextSizeClass}
+              onClick={(text) => openLargerTextModal(text)}
+              isBanner2={true}
+            />
           </div>
           <Keyboard
             onChar={onChar}
