@@ -29,11 +29,11 @@ export default function InfoModal({
       </Dialog.Title>
       <div className="mt-3 text-justify text-gray-600">
         <div>
-          <QuestionMarkCircleIcon className={iconClasses + ' text-blue-500'} />
+          <QuestionMarkCircleIcon className={iconClasses + ' text-green-700'} />
           {t('You need to guess the number that answers today\'s question in four tries.')}
         </div>
         <div className="mt-3">
-          <CalculatorIcon className={iconClasses + ' text-orange-700'} />
+          <CalculatorIcon className={iconClasses + ' text-red-700'} />
           {t('If the number is large, you only have to guess the first two digits, the rest are considered zeros.')}
         </div>
         <div className="mt-3">
@@ -45,11 +45,11 @@ export default function InfoModal({
           {t('When you guess the number, you will get a trophy, depending on how many tries it took you.')}
         </div>
         <div className="mt-3">
-          <CalendarDaysIcon className={iconClasses + ' text-fuchsia-700'} />
+          <CalendarDaysIcon className={iconClasses + ' text-red-700'} />
           {t('Every day there is a new question.')}
         </div>
         <div className="mt-3">
-          <SparklesIcon className={iconClasses + ' text-lime-500'} />
+          <SparklesIcon className={iconClasses + ' text-green-700'} />
           {t('Good luck!')}
         </div>
         <div className="mt-3 border-t-2 pt-3 text-sm">

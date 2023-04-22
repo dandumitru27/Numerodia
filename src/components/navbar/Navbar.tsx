@@ -12,16 +12,17 @@ export default function Navbar({
 }: Props) {
   const { i18n } = useTranslation();
 
-  var domain = 'numerodia';
+  var domainFirstPart = 'numero';
   if (i18n.language === 'ro') {
-    domain = 'ro.' + domain;
+    domainFirstPart = 'ro.' + domainFirstPart;
   }
 
   return (
     <div>
       <div className="flex justify-between px-3 mb-1">
-        <div className="flex font-bold text-lg">
-          <span className="text-green-800">{domain}</span>
+        <div className="flex text-lg">
+          <span className="text-green-700">{domainFirstPart}</span>
+          <span className="text-green-700 font-bold">dia</span>
           <span className="text-slate-300">.com</span>
         </div>
         <div className="flex mt-0.5">
