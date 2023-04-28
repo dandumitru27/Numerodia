@@ -46,8 +46,8 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 50
   },
   { // 2022-04-29
-    question: 'Cât personal activ are Armata Chinei, cea mai mare din lume? (rotunjit)',
-    answer: 2_200_000
+    question: 'Cât costă un gram de aur, în lei? (rotunjit)',
+    answer: 280
   },
   {
     question: 'Ce lungime are un bazin olimpic, în metri?',
@@ -56,10 +56,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți ani are Klaus Iohannis?',
     answer: 63
-  },
-  {
-    question: 'Cât costă un gram de aur, în lei? (rotunjit)',
-    answer: 280
   },
   {
     question: 'Câte restaurante McDonald\'s sunt în România?',
