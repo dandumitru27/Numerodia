@@ -50,6 +50,35 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 280
   },
   {
+    question: 'Ce avere are Bernard Arnault, cel mai bogat om din lume, în miliarde de dolari? (rotunjită)',
+    answer: 230
+  },
+  {
+    question: 'Ce suprafață are Rusia, în kilometri pătrați? (rotunjită)',
+    answer: 17_000_000,
+    hint: 'Ucraina are o suprafață de 600.000 de kilometri pătrați.'
+  },
+  {
+    question: 'Câți oameni au murit de COVID-19, în toată lumea? (rotunjit)',
+    answer: 6_800_000
+  },
+  {
+    question: 'Ce procent din consumul de energie electrică al României e furnizat, în medie, de centrala nucleară de la Cernavodă?',
+    answer: 20
+  },
+  {
+    question: 'Care este vârsta medie în Africa?',
+    answer: 19
+  },
+  {
+    question: 'Care este viteza maximă atinsă vreodată de un elicopter, în kilometri pe oră? (rotunjită)',
+    answer: 640
+  },
+  { // 2022-05-06
+    question: 'Câți ani a fost pe tron Elisabeta a II-a, regina Marii Britanii și a Irlandei de Nord?',
+    answer: 70
+  },
+  {
     question: 'Ce lungime are un bazin olimpic, în metri?',
     answer: 50
   },
@@ -67,7 +96,11 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'Arena Națională are o capacitate de 55.600 de locuri.',
   },
   {
-    question: 'Ce distanță oficială are un maraton? (doar partea întreagă)',
+    question: 'Câte state membre sunt în Uniunea Europeană?',
+    answer: 27
+  },
+  {
+    question: 'Ce distanță oficială are un maraton, în kilometri? (doar partea întreagă)',
     answer: 42
   },
   {
