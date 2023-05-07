@@ -83,8 +83,30 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 50
   },
   {
-    question: 'Câți ani are Klaus Iohannis?',
-    answer: 63
+    question: 'Ce procent dintre români se declară creștini ortodocși?',
+    answer: 73
+  },
+  {
+    question: 'Câți ani are Joe Biden, președintele S.U.A.?',
+    answer: 80,
+    hint: 'Vladimir Putin are 70 de ani.'
+  },
+  {
+    question: 'Care este populația Uniunii Europene? (rotunjită)',
+    answer: 440_000_000,
+    hint: 'Populația S.U.A. este de 330 de milioane.',
+  },
+  {
+    question: 'Câte insule locuite are Grecia? (rotunjit)',
+    answer: 220
+  },
+  {
+    question: 'De câți ani există C.E.C., Casa de Economii și Consemnațiuni? (rotunjit)',
+    answer: 150
+  },
+  {  // 2022-05-13
+    question: 'Câte state membre sunt în O.N.U.? (rotunjit)',
+    answer: 190
   },
   {
     question: 'Câte restaurante McDonald\'s sunt în România?',
@@ -93,19 +115,27 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Ce capacitate are Allianz Arena, stadionul echipei Bayern München?',
     answer: 75_000,
-    hint: 'Arena Națională are o capacitate de 55.600 de locuri.',
+    hint: 'Arena Națională are o capacitate de 55.600 de locuri.'
   },
   {
     question: 'Câte state membre sunt în Uniunea Europeană?',
     answer: 27
   },
   {
+    question: 'Câți ani are Klaus Iohannis?',
+    answer: 63
+  },
+  {
     question: 'Ce distanță oficială are un maraton, în kilometri? (doar partea întreagă)',
     answer: 42
   },
   {
-    question: 'Care e populația Uniunii Europene? (rotunjită)',
-    answer: 440_000_000,
-    hint: 'Populația S.U.A. este de 330 de milioane.',
+    question: 'Care este recordul de viteză pe bicicletă clasică, fără ajutoare, pe drum drept, în kilometri pe oră? (rotunjit)',
+    answer: 140
+  },
+  {
+    question: 'Cât valorează Apple, ce mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
+    answer: 2_750,
+    hint: 'Amazon e pe locul 4 cu 1.080 de miliarde de dolari.'
   }
 ]
