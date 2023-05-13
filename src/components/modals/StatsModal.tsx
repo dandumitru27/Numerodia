@@ -1,4 +1,4 @@
-import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { FaceFrownIcon, FireIcon, ShareIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { useTranslation } from "react-i18next"
 import Trophy from "../../enums/Trophy"
 import { getNumberFormatted, getStatsLineText, getStreakText, getYouWonMessage } from "../../i18n/translate-methods"
@@ -6,6 +6,7 @@ import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from ".
 import GameStats from "../../models/GameStats"
 import Hint from "../../models/Hint"
 import BaseModal from "./BaseModal"
+import shareResult from "../../lib/shareResult"
 
 type Props = {
   isOpen: boolean,
@@ -68,7 +69,21 @@ export default function StatsModal({
         <StatsLine trophy={Trophy.Silver} gameStats={gameStats} />
         <StatsLine trophy={Trophy.Bronze} gameStats={gameStats} />
         <StatsLine gameStats={gameStats} />
-        {gameResult && <div className="mt-7">{t('Come back for another question')} <span className="font-bold">{t('tomorrow')}</span>.</div>}
+        {gameResult &&
+          <div className="mt-7">
+            {t('Come back for another question') + ' '}
+            <span className="font-bold">{t('tomorrow')}</span>.
+            {/* <div className="flex justify-center">
+              <button
+                className="inline-flex mt-4 bg-green-600 text-white px-6 py-2 rounded-full"
+                onClick={() => { shareResult() }}
+              >
+                {t('Share result')} &nbsp;
+                <ShareIcon className="h-6 w-6 pt-0.5"></ShareIcon>
+              </button>
+            </div> */}
+          </div>
+        }
       </div>
     </BaseModal>
   )

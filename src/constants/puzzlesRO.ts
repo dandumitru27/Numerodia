@@ -104,13 +104,46 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'De câți ani există C.E.C., Casa de Economii și Consemnațiuni? (rotunjit)',
     answer: 150
   },
-  {  // 2022-05-13
+  { // 2022-05-13
     question: 'Câte state membre sunt în O.N.U.? (rotunjit)',
     answer: 190
   },
   {
+    question: 'De câți ani este la putere Recep Erdogan în Turcia, întâi ca prim-ministru și apoi ca președinte?',
+    answer: 20
+  },
+  {
     question: 'Câte restaurante McDonald\'s sunt în România?',
     answer: 96
+  },
+  {
+    question: 'Ce suprafață are Ungaria, în kilometri pătrați? (rotunjită)',
+    answer: 93_000,
+    hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
+  },
+  {
+    question: 'Care este vârsta de pensionare în Franța?',
+    answer: 62
+  },
+  {
+    question: 'Ce procent din populația Republicii Moldova se declară moldoveni sau români (și nu ruși, găgăuzi, ucraineni, etc.)?',
+    answer: 82
+  },
+  {
+    question: 'Care a fost salariul mediu net în România în luna martie, în lei? (rotunjit)',
+    answer: 4_500
+  },
+  { // 2022-05-20
+    question: 'Care este distanța maximă, în kilometri, pe care o poate parcurge fără reîncărcare mașina electrică Tesla Model S? (rotunjit)',
+    answer: 640
+  },
+  {
+    question: 'Câți oameni a pierdut Rusia în Al Doilea Război Mondial, atât militari cât și civili? (rotunjit)',
+    answer: 27_000_000
+  },
+  {
+    question: 'Care este recordul de viteză pe bicicletă clasică, fără ajutoare, pe drum drept, în kilometri pe oră? (rotunjit)',
+    answer: 140
   },
   {
     question: 'Ce capacitate are Allianz Arena, stadionul echipei Bayern München?',
@@ -130,12 +163,21 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 42
   },
   {
-    question: 'Care este recordul de viteză pe bicicletă clasică, fără ajutoare, pe drum drept, în kilometri pe oră? (rotunjit)',
-    answer: 140
+    question: 'Cât valorează Apple, ce mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
+    answer: 2_700,
+    hint: 'Amazon e pe locul 4 cu 1.080 de miliarde de dolari.'
   },
   {
-    question: 'Cât valorează Apple, ce mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
-    answer: 2_750,
-    hint: 'Amazon e pe locul 4 cu 1.080 de miliarde de dolari.'
-  }
+    question: 'Câți utilizatori activi are Facebook, în toată lumea? (rotunjit)',
+    answer: 2_900_000_000,
+    hint: 'Populația lumii e 8 miliarde de oameni.'
+  },
+  {
+    question: 'Care e recordul de cea mai joasă temperatură în Islanda, în grade Celsius cu minus?',
+    answer: 39
+  },
+  {
+    question: 'Câte țări sunt în NATO?',
+    answer: 31
+  },
 ]
