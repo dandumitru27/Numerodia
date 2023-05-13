@@ -1,4 +1,4 @@
-import { FaceFrownIcon, FireIcon, ShareIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { useTranslation } from "react-i18next"
 import Trophy from "../../enums/Trophy"
 import { getNumberFormatted, getStatsLineText, getStreakText, getYouWonMessage } from "../../i18n/translate-methods"
@@ -6,7 +6,6 @@ import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from ".
 import GameStats from "../../models/GameStats"
 import Hint from "../../models/Hint"
 import BaseModal from "./BaseModal"
-import shareResult from "../../lib/shareResult"
 
 type Props = {
   isOpen: boolean,
