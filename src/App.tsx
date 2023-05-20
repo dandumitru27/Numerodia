@@ -16,6 +16,7 @@ import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorag
 import InfoModal from './components/modals/InfoModal';
 import { useTranslation } from 'react-i18next';
 import './i18n/config';
+import { getSiteName } from './i18n/translate-methods';
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -118,7 +119,7 @@ export default function App() {
 
   useEffect(() => {
     if (i18n.language === 'ro') {
-      document.title = "RO.Numerodia - Ghicește numărul zilei";
+      document.title = getSiteName() + " - Ghicește numărul zilei";
     }
   }, [i18n.language]);
 
@@ -255,7 +256,8 @@ export default function App() {
             handleClose={() => setIsStatsModalOpen(false)}
             gameStats={stats}
             lastHint={lastHint}
-            answer={puzzle.answer}
+            hints={hints}
+            puzzle={puzzle}
           />
         </div>
       </div>

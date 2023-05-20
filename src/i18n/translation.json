@@ -7,6 +7,8 @@
   "Come back for another question": "Come back for another question",
   "even": "even",
   "Every day there is a new question.": "Every day there is a new question.",
+  "Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using.":
+    "Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using.",
   "gold": "gold",
   "Good luck!": "Good luck!",
   "Hint": "Hint",
@@ -28,6 +30,8 @@
   "That's correct": "That's correct",
   "The answer is": "The answer is",
   "The first digit is": "The first digit is",
+  "The result was copied to your clipboard. You can now paste it wherever you want to share it.":
+    "The result was copied to your clipboard. You can now paste it wherever you want to share it.",
   "The second digit is": "The second digit is",
   "to": "to",
   "tomorrow": "tomorrow",

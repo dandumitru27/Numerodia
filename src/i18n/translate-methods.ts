@@ -32,6 +32,12 @@ export function getStatsLineText(trophy: Trophy, count: number) {
   }
 }
 
+function getTrophyType(trophy?: Trophy): string {
+  return trophy !== undefined
+    ? t(Trophy[trophy].toLowerCase())
+    : '';
+}
+
 export function getStreakText(count: number) {
   if (i18next.language === 'ro' && count === 1) {
     return 'consecutiv';
@@ -44,8 +50,33 @@ export function getNumberFormatted(input: number) {
   return t('{{val, number}}', { val: input });
 }
 
-function getTrophyType(trophy?: Trophy): string {
-  return trophy !== undefined
-    ? t(Trophy[trophy].toLowerCase())
-    : '';
+export function getSiteName() {
+  if (i18next.language === 'ro') {
+    return 'RO.Numerodia';
+  }
+
+  return "Numerodia";
+}
+
+export function getSiteUrl() {
+  if (i18next.language === 'ro') {
+    return 'https://ro.numerodia.com';
+  }
+
+  return 'https://numerodia.com';
+}
+
+export function formatDateMonth(date: Date): string {
+  var day = padWithZero(date.getDate());
+  var month = padWithZero(date.getMonth() + 1);
+
+  if (i18next.language === 'ro') {
+    return `${day}.${month}`;
+  }
+
+  return `${month}/${day}`;
+}
+
+function padWithZero(input: number): string {
+  return input < 10 ? '0' + input : String(input);
 }

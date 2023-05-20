@@ -138,6 +138,36 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 640
   },
   {
+    question: 'Ce populație are orașul Bacău, conform recensământului din 2022? (rotunjită)',
+    answer: 130_000
+  },
+  {
+    question: 'Cât valorează Apple, cea mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
+    answer: 2_700,
+    hint: 'Amazon e pe locul 5 cu 1.100 de miliarde de dolari.'
+  },
+  {
+    question: 'Câte titluri WTA a câștigat Simona Halep?',
+    answer: 24
+  },
+  {
+    question: 'Care este viteza maximă oficială atinsă vreodată de un avion, în kilometri pe oră? (rotunjită)',
+    answer: 3_500
+  },
+  {
+    question: 'Ce înălțime are vârful Everest, în metri? (rotunjită)',
+    answer: 8_800,
+    hint: 'Vârful Mont Blanc, cel mai înalt din Alpi, are 4.810 metri.'
+  },
+  {
+    question: 'Acum câți ani a intrat în funcțiune metroul din București?',
+    answer: 43
+  },
+  { // 2022-05-27
+    question: 'Câți kilometri sunt pe șosea între Iași și Chișinău? (rotunjit)',
+    answer: 150
+  },
+  {
     question: 'Câți oameni a pierdut Rusia în Al Doilea Război Mondial, atât militari cât și civili? (rotunjit)',
     answer: 27_000_000
   },
@@ -163,11 +193,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 42
   },
   {
-    question: 'Cât valorează Apple, ce mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
-    answer: 2_700,
-    hint: 'Amazon e pe locul 4 cu 1.080 de miliarde de dolari.'
-  },
-  {
     question: 'Câți utilizatori activi are Facebook, în toată lumea? (rotunjit)',
     answer: 2_900_000_000,
     hint: 'Populația lumii e 8 miliarde de oameni.'
@@ -179,5 +204,17 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câte țări sunt în NATO?',
     answer: 31
+  },
+  {
+    question: 'Câți ani are Leonardo DiCaprio?',
+    answer: 48
+  },
+  {
+    question: 'Ce cotă de piață a avut Dacia în România în primul trimestru din 2023? (procent)',
+    answer: 33
+  },
+  {
+    question: 'Care este înălțimea vârfului Omu? (rotunjită)',
+    answer: 2_500
   },
 ]

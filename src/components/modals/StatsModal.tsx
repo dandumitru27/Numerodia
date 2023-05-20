@@ -6,13 +6,15 @@ import getTrophyColor, { getTrophyCountFromStats, getTrophyExclamation } from ".
 import GameStats from "../../models/GameStats"
 import Hint from "../../models/Hint"
 import BaseModal from "./BaseModal"
+import Puzzle from "../../models/puzzle"
 
 type Props = {
   isOpen: boolean,
   handleClose: () => void,
   gameStats: GameStats,
   lastHint?: Hint,
-  answer: number
+  hints: Hint[],
+  puzzle: Puzzle
 }
 
 export default function StatsModal({
@@ -20,9 +22,26 @@ export default function StatsModal({
   handleClose,
   gameStats,
   lastHint,
-  answer
+  hints,
+  puzzle
 }: Props) {
   const { t } = useTranslation();
+
+  // const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  // const [message, setMessage] = useState('');
+
+  // const showMessage = (mes: string) => {
+  //   setMessage(mes);
+  //   setIsMessageModalOpen(true);
+  // }
+
+  // const handleShareFailure = () => {
+  //   showMessage(t("Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using."));
+  // }
+
+  // const handleShareToClipboard = () => {
+  //   showMessage(t("The result was copied to your clipboard. You can now paste it wherever you want to share it."));
+  // }
 
   let gameResult;
 
@@ -46,7 +65,7 @@ export default function StatsModal({
       icon = <FaceFrownIcon className={iconSizeClasses} />
 
       message1 = t('Incorrect') + '.';
-      message2 = t('The answer is') + ' ' + getNumberFormatted(answer) + '.';
+      message2 = t('The answer is') + ' ' + getNumberFormatted(puzzle.answer) + '.';
     }
 
     gameResult =
@@ -75,7 +94,7 @@ export default function StatsModal({
             {/* <div className="flex justify-center">
               <button
                 className="inline-flex mt-4 bg-green-600 text-white px-6 py-2 rounded-full"
-                onClick={() => { shareResult() }}
+                onClick={() => { shareResult(puzzle, hints, handleShareToClipboard, handleShareFailure) }}
               >
                 {t('Share result')} &nbsp;
                 <ShareIcon className="h-6 w-6 pt-0.5"></ShareIcon>
@@ -84,6 +103,11 @@ export default function StatsModal({
           </div>
         }
       </div>
+      {/* <MessageModal
+        message={message}
+        isOpen={isMessageModalOpen}
+        handleClose={() => setIsMessageModalOpen(false)}
+      /> */}
     </BaseModal>
   )
 }

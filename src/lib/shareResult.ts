@@ -1,16 +1,27 @@
 import { UAParser } from 'ua-parser-js'
+import Puzzle from '../models/puzzle';
+import Hint from '../models/Hint';
+import { formatDateMonth, getSiteName, getSiteUrl } from '../i18n/translate-methods';
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable'];
 const parser = new UAParser();
 const browser = parser.getBrowser();
 const device = parser.getDevice();
 
-export default function shareResult() {
-  const textToShare = 'Numerodia 05/07: What is the population of Uganda?';
+export default function shareResult(
+  puzzle: Puzzle,
+  hints: Hint[],
+  handleShareToClipboard: () => void,
+  handleShareFailure: () => void
+) {
+  let textToShare = getSiteName() + ' ' + formatDateMonth(new Date()) + ': ' + puzzle.question;
+
+  textToShare += '\n' + getHintsAsEmojis(hints);
+
+  textToShare += '\n\n' + getSiteUrl();
 
   const shareData: ShareData = {
-    text: textToShare,
-    url: 'https://numerodia.com'
+    text: textToShare
   };
 
   let shareSucceeded = false;
@@ -23,6 +34,21 @@ export default function shareResult() {
   } catch (error) {
     shareSucceeded = false;
   }
+
+  try {
+    if (!shareSucceeded) {
+      if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(textToShare)
+          .then(handleShareToClipboard)
+          .catch(handleShareFailure)
+      } else {
+        handleShareFailure()
+      }
+    }
+  } catch (error) {
+    handleShareFailure()
+  }
 }
 
 const shouldAttemptShare = (shareData: ShareData) => {
@@ -34,4 +60,14 @@ const shouldAttemptShare = (shareData: ShareData) => {
     navigator.canShare(shareData) &&
     navigator.share
   )
+}
+
+const getHintsAsEmojis = (hints: Hint[]): string => {
+  let result = '';
+
+  hints.forEach(hint => {
+    result += hint.arrowCount;
+  })
+
+  return result;
 }
