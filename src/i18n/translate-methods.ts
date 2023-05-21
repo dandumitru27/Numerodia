@@ -32,7 +32,7 @@ export function getStatsLineText(trophy: Trophy, count: number) {
   }
 }
 
-function getTrophyType(trophy?: Trophy): string {
+export function getTrophyType(trophy?: Trophy): string {
   return trophy !== undefined
     ? t(Trophy[trophy].toLowerCase())
     : '';

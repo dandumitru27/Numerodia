@@ -1,4 +1,4 @@
-import { FaceFrownIcon, FireIcon, TrophyIcon } from "@heroicons/react/24/outline"
+import { FaceFrownIcon, FireIcon, ShareIcon, TrophyIcon } from "@heroicons/react/24/outline"
 import { useTranslation } from "react-i18next"
 import Trophy from "../../enums/Trophy"
 import { getNumberFormatted, getStatsLineText, getStreakText, getYouWonMessage } from "../../i18n/translate-methods"
@@ -7,6 +7,9 @@ import GameStats from "../../models/GameStats"
 import Hint from "../../models/Hint"
 import BaseModal from "./BaseModal"
 import Puzzle from "../../models/puzzle"
+import shareResult from "../../lib/shareResult"
+import MessageModal from "./MessageModal"
+import { useState } from "react"
 
 type Props = {
   isOpen: boolean,
@@ -27,21 +30,21 @@ export default function StatsModal({
 }: Props) {
   const { t } = useTranslation();
 
-  // const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  // const [message, setMessage] = useState('');
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const [message, setMessage] = useState('');
 
-  // const showMessage = (mes: string) => {
-  //   setMessage(mes);
-  //   setIsMessageModalOpen(true);
-  // }
+  const showMessage = (mes: string) => {
+    setMessage(mes);
+    setIsMessageModalOpen(true);
+  }
 
-  // const handleShareFailure = () => {
-  //   showMessage(t("Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using."));
-  // }
+  const handleShareFailure = () => {
+    showMessage(t("Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using."));
+  }
 
-  // const handleShareToClipboard = () => {
-  //   showMessage(t("The result was copied to your clipboard. You can now paste it wherever you want to share it."));
-  // }
+  const handleShareToClipboard = () => {
+    showMessage(t("The result was copied to your clipboard. You can now paste it wherever you want to share it."));
+  }
 
   let gameResult;
 
@@ -91,7 +94,7 @@ export default function StatsModal({
           <div className="mt-7">
             {t('Come back for another question') + ' '}
             <span className="font-bold">{t('tomorrow')}</span>.
-            {/* <div className="flex justify-center">
+            <div className="flex justify-center">
               <button
                 className="inline-flex mt-4 bg-green-600 text-white px-6 py-2 rounded-full"
                 onClick={() => { shareResult(puzzle, hints, handleShareToClipboard, handleShareFailure) }}
@@ -99,15 +102,15 @@ export default function StatsModal({
                 {t('Share result')} &nbsp;
                 <ShareIcon className="h-6 w-6 pt-0.5"></ShareIcon>
               </button>
-            </div> */}
+            </div>
           </div>
         }
       </div>
-      {/* <MessageModal
+      <MessageModal
         message={message}
         isOpen={isMessageModalOpen}
         handleClose={() => setIsMessageModalOpen(false)}
-      /> */}
+      />
     </BaseModal>
   )
 }

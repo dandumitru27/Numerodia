@@ -1,7 +1,9 @@
 import { UAParser } from 'ua-parser-js'
 import Puzzle from '../models/puzzle';
 import Hint from '../models/Hint';
-import { formatDateMonth, getSiteName, getSiteUrl } from '../i18n/translate-methods';
+import { formatDateMonth, getSiteName, getSiteUrl, getTrophyType } from '../i18n/translate-methods';
+import Trophy from '../enums/Trophy';
+import Direction from '../enums/Direction';
 
 const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable'];
 const parser = new UAParser();
@@ -18,7 +20,7 @@ export default function shareResult(
 
   textToShare += '\n' + getHintsAsEmojis(hints);
 
-  textToShare += '\n\n' + getSiteUrl();
+  textToShare += '\n' + getSiteUrl();
 
   const shareData: ShareData = {
     text: textToShare
@@ -65,9 +67,46 @@ const shouldAttemptShare = (shareData: ShareData) => {
 const getHintsAsEmojis = (hints: Hint[]): string => {
   let result = '';
 
-  hints.forEach(hint => {
-    result += hint.arrowCount;
-  })
+  for (let index = 0; index < hints.length; index++) {
+    const hint = hints[index];
+
+    let emoji = '';
+
+    if (hint.isCorrect) {
+      switch (hint.trophy) {
+        case Trophy.Gold:
+          emoji = '🥇';
+          break;
+        case Trophy.Silver:
+          emoji = '🥈';
+          break;
+        case Trophy.Bronze:
+          emoji = '🥉';
+          break;
+      }
+
+      emoji += ' (' + getTrophyType(hint.trophy) + ')';
+
+    } else if (hint.isGameLost) {
+      emoji = '🙁';
+    } else {
+      if (hint.arrowDirection === Direction.Up) {
+        if (hint.arrowCount === 2) {
+          emoji = '⇈';
+        } else {
+          emoji = '↑';
+        }
+      } else {
+        if (hint.arrowCount === 2) {
+          emoji = '⇊';
+        } else {
+          emoji = '↓';
+        }
+      }
+    }
+
+    result += (index + 1) + ') ' + emoji + '\n';
+  }
 
   return result;
 }
