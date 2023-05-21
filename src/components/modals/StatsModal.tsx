@@ -39,7 +39,7 @@ export default function StatsModal({
   }
 
   const handleShareFailure = () => {
-    showMessage(t("Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using."));
+    showMessage(t("Failed to copy the text to the clipboard. Sorry. This doesn't work correctly in in-app browsers (like Facebook's), but works if you open the game in an independent browser (like Chrome or Safari)."));
   }
 
   const handleShareToClipboard = () => {

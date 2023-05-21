@@ -7,8 +7,8 @@
   "Come back for another question": "Întoarce-te pentru o nouă întrebare",
   "even": "pară",
   "Every day there is a new question.": "În fiecare zi apare o nouă întrebare.",
-  "Failed to copy the text to the clipboard. Sorry. It might be because of the browser you're using.":
-    "A apărut o eroare la copierea rezultatului în clipboard. Îmi pare rău. E posibil să fie din cauza browser-ului pe care îl folosești.",
+  "Failed to copy the text to the clipboard. Sorry. This doesn't work correctly in in-app browsers (like Facebook's), but works if you open the game in an independent browser (like Chrome or Safari).":
+    "A apărut o eroare la copierea rezultatului în clipboard. Îmi pare rău. Nu funcționează corect în browser-e din interiorul aplicațiilor (ca Facebook), dar funcționează dacă deschizi jocul într-un browser independent (ca Chrome sau Safari).",
   "gold": "aur",
   "Good luck!": "Mult succes!",
   "Hint": "Indiciu",
