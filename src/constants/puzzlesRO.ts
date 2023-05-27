@@ -168,6 +168,35 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 150
   },
   {
+    question: 'Câți ani avea Tina Turner?',
+    answer: 83
+  },
+  {
+    question: 'Care e salariul mediu net în învățământul din România, în lei? (rotunjit)',
+    answer: 4_000,
+    hint: 'Salariul mediu net în România, pe toate profesiile, e de aproximativ 4500 de lei.'
+  },
+  {
+    question: 'Ce distanță oficială are un maraton, în kilometri? (doar partea întreagă)',
+    answer: 42
+  },
+  {
+    question: 'Care e populația totală a lumii, acum? (rotunjită)',
+    answer: 8_000_000_000
+  },
+  {
+    question: 'Câți ani a fost Angela Merkel cancelara Germaniei?',
+    answer: 16
+  },
+  {
+    question: 'Ce cotă de piață a avut Dacia în România în primul trimestru din 2023? (procent)',
+    answer: 33
+  },
+  { // 2022-06-03
+    question: 'Acum câți ani a fost înființat Colegiul "Ferdinand I" din Bacău? (rotunjit)',
+    answer: 150
+  },
+  {
     question: 'Câți oameni a pierdut Rusia în Al Doilea Război Mondial, atât militari cât și civili? (rotunjit)',
     answer: 27_000_000
   },
@@ -189,10 +218,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 63
   },
   {
-    question: 'Ce distanță oficială are un maraton, în kilometri? (doar partea întreagă)',
-    answer: 42
-  },
-  {
     question: 'Câți utilizatori activi are Facebook, în toată lumea? (rotunjit)',
     answer: 2_900_000_000,
     hint: 'Populația lumii e 8 miliarde de oameni.'
@@ -210,11 +235,19 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 48
   },
   {
-    question: 'Ce cotă de piață a avut Dacia în România în primul trimestru din 2023? (procent)',
-    answer: 33
-  },
-  {
     question: 'Care este înălțimea vârfului Omu? (rotunjită)',
     answer: 2_500
+  },
+  {
+    question: 'Acum câți ani a fost pus în funcțiune Big Ben-ul din Londra? (rotunjit)',
+    answer: 160
+  },
+  {
+    question: 'Ce procent din totalul de curent electric produs în România provine din energie hidroelectrică?',
+    answer: 25
+  },
+  {
+    question: 'Pe câți ani se poate face maxim un credit ipotecar în România?',
+    answer: 35
   },
 ]
