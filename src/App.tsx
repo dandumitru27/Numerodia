@@ -16,10 +16,9 @@ import { loadCurrentGameStateFromLocalStorage, saveCurrentGameStateToLocalStorag
 import InfoModal from './components/modals/InfoModal';
 import { useTranslation } from 'react-i18next';
 import './i18n/config';
-import { getSiteName } from './i18n/translate-methods';
 
 export default function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [puzzle] = useState(() => getTodaysPuzzle());
   const [currentGuess, setCurrentGuess] = useState('');
@@ -116,12 +115,6 @@ export default function App() {
       window.location.replace(urlWithoutWww);
     }
   }, []);
-
-  useEffect(() => {
-    if (i18n.language === 'ro') {
-      document.title = getSiteName() + " - Ghicește numărul zilei";
-    }
-  }, [i18n.language]);
 
   useEffect(() => {
     if (!loadCurrentGameStateFromLocalStorage()) {
