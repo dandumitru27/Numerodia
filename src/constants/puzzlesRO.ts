@@ -201,17 +201,8 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 27_000_000
   },
   {
-    question: 'Care este recordul de viteză pe bicicletă clasică, fără ajutoare, pe drum drept, în kilometri pe oră? (rotunjit)',
-    answer: 140
-  },
-  {
-    question: 'Ce capacitate are Allianz Arena, stadionul echipei Bayern München?',
-    answer: 75_000,
-    hint: 'Arena Națională are o capacitate de 55.600 de locuri.'
-  },
-  {
-    question: 'Câte state membre sunt în Uniunea Europeană?',
-    answer: 27
+    question: 'Pe câți ani se poate face maxim un credit ipotecar în România?',
+    answer: 35
   },
   {
     question: 'Câți ani are Klaus Iohannis?',
@@ -220,19 +211,29 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți utilizatori activi are Facebook, în toată lumea? (rotunjit)',
     answer: 2_900_000_000,
-    hint: 'Populația lumii e 8 miliarde de oameni.'
+    hint: 'Populația lumii e de 8 miliarde de oameni.'
+  },
+  {
+    question: 'Câte state membre sunt în Uniunea Europeană?',
+    answer: 27
+  },
+  {
+    question: 'Care este recordul de viteză pe bicicletă clasică, fără ajutoare, pe drum drept, în kilometri pe oră? (rotunjit)',
+    answer: 140
+  },
+  { // 2022-06-10
+    question: 'Ce capacitate are Allianz Arena, stadionul echipei Bayern München?',
+    answer: 75_000,
+    hint: 'Arena Națională are o capacitate de 55.600 de locuri.'
+  },
+  {
+    question: 'Ce suprafață are Bulgaria, în kilometri pătrați? (rotunjită)',
+    answer: 110_000,
+    hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
   },
   {
     question: 'Care e recordul de cea mai joasă temperatură în Islanda, în grade Celsius cu minus?',
     answer: 39
-  },
-  {
-    question: 'Câte țări sunt în NATO?',
-    answer: 31
-  },
-  {
-    question: 'Câți ani are Leonardo DiCaprio?',
-    answer: 48
   },
   {
     question: 'Care este înălțimea vârfului Omu? (rotunjită)',
@@ -247,7 +248,40 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 25
   },
   {
-    question: 'Pe câți ani se poate face maxim un credit ipotecar în România?',
-    answer: 35
+    question: 'Câte țări sunt în NATO?',
+    answer: 31
+  },
+  { // 2022-06-17
+    question: 'Câți ani are Leonardo DiCaprio?',
+    answer: 48
+  },
+  {
+    question: 'Ce populație are orașul Brașov, conform recensământului din 2022? (rotunjită)',
+    answer: 230_000
+  },
+  {
+    question: 'Câte țări au ieșire la Marea Mediterană?',
+    answer: 22
+  },
+  {
+    question: 'Câți ani a existat Imperiul Otoman? (rotunjit)',
+    answer: 620
+  },
+  {
+    question: 'Ce înălțime are Marea Piramidă din Giza, în metri? (rotunjită)',
+    answer: 130
+  },
+  {
+    question: 'Ce lungime are râul Siret, în kilometri? (rotunjită)',
+    answer: 640,
+    hint: 'Râul Prut are o lungime de 950 de kilometri.'
+  },
+  {
+    question: 'Care este temperatura maximă înregistrată vreodată în România, în grade Celsius?',
+    answer: 44
+  },
+  { // 2022-06-24
+    question: 'Care este salariul minim net în România, în lei? (rotunjit)',
+    answer: 1_800
   },
 ]
