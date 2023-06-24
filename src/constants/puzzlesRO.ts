@@ -284,4 +284,34 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Care este salariul minim net în România, în lei? (rotunjit)',
     answer: 1_800
   },
+  {
+    question: 'Câți mercenari avea în decembrie 2022 Gruparea Wagner din Rusia, aproximativ?',
+    answer: 50_000
+  },
+  {
+    question: 'Câți ani are Florin Piersic?',
+    answer: 87
+  },
+  {
+    question: 'Ce lungime au granițele României, în kilometri? (rotunjită)',
+    answer: 3_100
+  },
+  {
+    question: 'Câte magazine Dedeman sunt în România?',
+    answer: 59
+  },
+  {
+    question: 'Ce suprafață are Grecia, în kilometri pătrați? (rotunjită)',
+    answer: 130_000,
+    hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
+  },
+  {
+    question: 'Câți români sunt stabiliți în Germania, după ultima estimare din 2021? (rotunjit)',
+    answer: 840_000,
+    hint: 'În Spania era estimat în 2021 că sunt stabiliți 550.000 de români.'
+  },
+  { // 2022-07-01
+    question: 'Câți ani a durat Războiul Rece?',
+    answer: 44
+  },
 ]
