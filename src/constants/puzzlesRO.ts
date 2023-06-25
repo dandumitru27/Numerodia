@@ -289,12 +289,12 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 50_000
   },
   {
-    question: 'Câți ani are Florin Piersic?',
-    answer: 87
+    question: 'La ce adâncime sub nivelul mării e scufundat Titanicul, în metri?',
+    answer: 3_700
   },
   {
-    question: 'Ce lungime au granițele României, în kilometri? (rotunjită)',
-    answer: 3_100
+    question: 'Câți ani are Florin Piersic?',
+    answer: 87
   },
   {
     question: 'Câte magazine Dedeman sunt în România?',
@@ -313,5 +313,37 @@ export const puzzlesRO: Array<Puzzle> = [
   { // 2022-07-01
     question: 'Câți ani a durat Războiul Rece?',
     answer: 44
+  },
+  {
+    question: 'Acum câți ani a fost fondată Universitatea "Vasile Alecsandri" din Bacău?',
+    answer: 62
+  },
+  {
+    question: 'Ce lungime au granițele României, în kilometri? (rotunjită)',
+    answer: 3_100
+  },
+  {
+    question: 'Anul acesta e estimat că populația Indiei a depășit-o pe cea a Chinei. Care e populația estimată a Indiei acum? (rotunjită)',
+    answer: 1_400_000_000
+  },
+  {
+    question: 'Cât costă cel mai scump telefon iPhone, 14 Pro Max de 1TB, în lei?',
+    answer: 9_200
+  },
+  {
+    question: 'Câți kilometri are celebrul drum Route 66 din Statele Unite ale Americii? (rotunjit)',
+    answer: 3_900
+  },
+  {
+    question: 'Câte țări sunt în America de Sud?',
+    answer: 12
+  },
+  { // 2022-07-08
+    question: 'La ce vârstă a murit Dumitru Sechelariu, fostul primar al Bacăului?',
+    answer: 54
+  },
+  {
+    question: 'Câte orașe din China au o populație mai mare de 2 milioane?',
+    answer: 53
   },
 ]
