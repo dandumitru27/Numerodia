@@ -346,4 +346,42 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Câte orașe din China au o populație mai mare de 2 milioane?',
     answer: 53
   },
+  {
+    question: 'Care a fost rata de promovare la Bacalaureatul din 2023, procentual?',
+    answer: 75
+  },
+  {
+    question: 'Care e lungimea ecuatorului în jurul Pământului, în kilometri? (rotunjită)',
+    answer: 40_000,
+    hint: 'Distanța rutieră între Paris și Beijing este de 10.300 de kilometri.'
+  },
+  {
+    question: 'Cât este alocația lunară în România pentru copiii între 2 și 18 ani, în lei? (rotunjită)',
+    answer: 250
+  },
+  {
+    question: 'Din câte republici sovietice era constituită URSS, înainte de dezmembrare?',
+    answer: 15
+  },
+  {
+    question: 'Câte locuințe s-au prăbușit în România din cauza cutremului din 1977? (rotunjit)',
+    answer: 35_000
+  },
+  { // 2022-07-15
+    question: 'Câți pensionari sunt în România? (rotunjit)',
+    answer: 4_700_000,
+    hint: 'Populația totală a României este de aproximativ 19 milioane.'
+  },
+  {
+    question: 'În România sunt doar două autostrăzi date integral în folosință, A2 și A10. Câți kilometri are A10, Sebeș - Turda?',
+    answer: 70
+  },
+  {
+    question: 'Ce populație are Sofia, capitala Bulgariei? (rotunjită)',
+    answer: 1_200_000
+  },
+  {
+    question: 'Câți ani are Céline Dion?',
+    answer: 55
+  },
 ]
