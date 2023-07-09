@@ -96,13 +96,15 @@ export default function StatsModal({
             <span className="font-bold">{t('tomorrow')}</span>.
             <div className="flex justify-center">
               <button
-                className="inline-flex mt-4 bg-green-600 text-white px-6 py-2 rounded-full"
+                className="inline-flex mt-3 mb-3 bg-green-600 text-white px-6 py-2 rounded-full"
                 onClick={() => { shareResult(puzzle, hints, handleShareToClipboard, handleShareFailure) }}
               >
                 {t('Share result')} &nbsp;
                 <ShareIcon className="h-6 w-6 pt-0.5"></ShareIcon>
               </button>
             </div>
+            {t('Stay in touch by following') + ' '}
+            <a href="https://www.facebook.com/numerodia">{t('our Facebook page')}</a>.
           </div>
         }
       </div>
