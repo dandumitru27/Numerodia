@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .flip-inner {
   transition: transform 1s;
   transform-style: preserve-3d;
