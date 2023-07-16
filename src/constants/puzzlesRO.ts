@@ -377,11 +377,40 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 70
   },
   {
+    question: 'Ce procent din populația Statului Israel e reprezentat de etnicii arabi?',
+    answer: 21
+  },
+  {
     question: 'Ce populație are Sofia, capitala Bulgariei? (rotunjită)',
     answer: 1_200_000
   },
   {
     question: 'Câți ani are Céline Dion?',
     answer: 55
+  },
+  {
+    question: 'Care este prețul de pornire a unei mașini electrice Dacia Spring, în Euro? (rotunjit)',
+    answer: 20_000
+  },
+  {
+    question: 'Ce lungime are podul suspendat peste Dunăre de la Brăila, inaugurat în 2023, în metri?',
+    answer: 1_900
+  },
+  { // 2022-07-22
+    question: 'Câte albume a vândut Elvis Presley? (rotunjit)',
+    answer: 160_000_000,
+    hint: 'The Beatles au vândut 230 de milioane de albume.'
+  },
+  {
+    question: 'Ce procent din suprafața Pământului este acoperit cu apă?',
+    answer: 70
+  },
+  {
+    question: 'Care este înălțimea vârfului Toaca din Masivul Ceahlău, in metri? (rotunjită)',
+    answer: 1_900
+  },
+  {
+    question: 'Ce lungime are drumul național DN1 București - Oradea, în kilometri? (rotunjită)',
+    answer: 620
   },
 ]
