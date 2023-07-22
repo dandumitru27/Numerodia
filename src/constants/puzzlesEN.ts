@@ -1,9 +1,19 @@
 import Puzzle from "../models/puzzle";
 
 export const puzzlesEN: Array<Puzzle> = [
+  { // 2022-07-22
+    question: "How many views did The Lincoln Lawyer: Season 2, Netflix's top series, have last week globally? (rounded)",
+    answer: 8_300_000,
+    hint: "The Witcher: Season 3 came second, with 6.7 million views."
+  },
   {
-    question: "What's the current net worth of Elon Musk, the whealthiest man on the planet, in billion U.S. dollars? (rounded)",
-    answer: 240
+    question: "How many member states are in the United Nations (UN)? (rounded)",
+    answer: 190
+  },
+  {
+    question: "What's the current net worth of Elon Musk, the second whealthiest man on the planet, in billion U.S. dollars? (rounded)",
+    answer: 230,
+    hint: "Bill Gates is on the fifth place with 120 billion U.S. dollars."
   },
   {
     question: "How old is Vladimir Putin?",
@@ -22,9 +32,10 @@ export const puzzlesEN: Array<Puzzle> = [
     question: "What's the median age in Africa?",
     answer: 19
   },
-  {
-    question: "How many member states are in the United Nations (UN)? (rounded)",
-    answer: 190
+  { // 2022-07-29
+    question: "What is the 2023 estimated GDP (gross domestic product) of China, in billion U.S. dollars? (rounded)",
+    answer: 19_000,
+    hint: "United States' 2023 estimated GDP is 26,000 billion U.S. dollars."
   },
   {
     question: "How many McDonald's restaurants are there in the United States? (rounded)",

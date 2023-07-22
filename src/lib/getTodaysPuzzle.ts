@@ -4,7 +4,7 @@ import { puzzlesEN } from "../constants/puzzlesEN";
 import i18next from 'i18next';
 
 const firstGameDateRO = new Date(2023, 3, 19); // 3 is April
-const firstGameDateEN = new Date(2023, 2, 11);
+const firstGameDateEN = new Date(2023, 6, 22); // 6 is July
 
 export default function getTodaysPuzzle() {
   let puzzles = puzzlesEN;
