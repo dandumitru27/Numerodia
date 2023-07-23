@@ -410,7 +410,34 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 1_900
   },
   {
+    question: 'Câți ani a fost Dacia o provincie romană? (rotunjit)',
+    answer: 160
+  },
+  {
     question: 'Ce lungime are drumul național DN1 București - Oradea, în kilometri? (rotunjită)',
     answer: 620
+  },
+  {
+    question: 'Ce populație are Spania? (rotunjită)',
+    answer: 48_000_000,
+    hint: 'Italia are o populație de 58 de milioane.'
+  },
+  {
+    question: 'De câți ani este Israel o țară independentă?',
+    answer: 75
+  },
+  { // 2022-07-29
+    question: 'Câți piloți participă în ediția actuală a campionatului de Formula 1?',
+    answer: 20
+  },
+  {
+    question: 'Ce suprafață are Groenlanda, în kilometri pătrați? (rotunjită)',
+    answer: 2_100_000,
+    hint: 'Vecina Islanda are o suprafață de 102.000 de kilometri pătrați.'
+  },
+  {
+    question: 'Care este temperatura maximă înregistrată vreodată în Grecia, în grade Celsius?',
+    answer: 48,
+    hint: 'Temperatura maximă înregistrată vreodată în România a fost de 44 de grade Celsius.'
   },
 ]
