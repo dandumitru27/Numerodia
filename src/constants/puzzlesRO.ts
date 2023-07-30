@@ -436,8 +436,37 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'Vecina Islanda are o suprafață de 102.000 de kilometri pătrați.'
   },
   {
+    question: "Acum câți ani a fost lansată prima păpușă Barbie?",
+    answer: 64
+  },
+  {
     question: 'Care este temperatura maximă înregistrată vreodată în Grecia, în grade Celsius?',
-    answer: 48,
-    hint: 'Temperatura maximă înregistrată vreodată în România a fost de 44 de grade Celsius.'
+    answer: 48
+  },
+  {
+    question: 'Câte aeroporturi operaționale sunt în România?',
+    answer: 17
+  },
+  {
+    question: 'Câți oameni au participat la festivalul Untold în 2022? (rotunjit)',
+    answer: 360_000,
+    hint: 'La festivalul Electric Castle au participat 270.000 de oameni în 2022.'
+  },
+  {
+    question: 'Câte județe sunt în România?',
+    answer: 41
+  },
+  { // 2022-08-05
+    question: 'Câți ani are Donald Trump, fostul președinte al S.U.A.?',
+    answer: 77
+  },
+  {
+    question: 'Câți pasageri poate transporta Wonder of the Seas, cea mai mare navă de croazieră din lume? (rotunjit)',
+    answer: 6_900,
+    hint: 'Titanicul putea transporta 2.400 de pasageri.'
+  },
+  {
+    question: 'Câte țări sunt în Africa?',
+    answer: 54
   },
 ]

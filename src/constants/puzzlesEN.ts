@@ -42,13 +42,42 @@ export const puzzlesEN: Array<Puzzle> = [
     answer: 13_000
   },
   {
+    question: "How many years ago was the first Barbie doll launched?",
+    answer: 64
+  },
+  {
+    question: "What percent of the Earth's surface is convered by water?",
+    answer: 70
+  },
+  {
     question: "How much is Apple, the biggest company in the world by market cap, worth, in billion U.S. dollars? (rounded)",
     answer: 3_000,
     hint: 'Amazon is the fifth biggest, with 1,300 billion U.S. dollars.'
   },
   {
+    question: "What's the population of New York? (rounded)",
+    answer: 8_800_000,
+    hint: "The population of Los Angeles is about 3,800,000 people."
+  },
+  {
     question: "How many passengers can Wonder of the Seas, the largest cruise ship in the world, carry? (rounded)",
     answer: 6_900,
     hint: 'The Titanic could carry 2,400 passengers.'
+  },
+  { // 2022-08-05
+    question: "How many drivers compete for the Formla 1 World Championship?",
+    answer: 20
+  },
+  {
+    question: "For how long, in years, has Israel been an independent country?",
+    answer: 75
+  },
+  {
+    question: "What percent of the U.S. population is Christian?",
+    answer: 63,
+  },
+  {
+    question: "How old is Donald Trump?",
+    answer: 77
   },
 ]
