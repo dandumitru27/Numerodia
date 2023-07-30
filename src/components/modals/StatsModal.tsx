@@ -104,7 +104,7 @@ export default function StatsModal({
               </button>
             </div>
             {t('Stay in touch by following') + ' '}
-            <a href="https://www.facebook.com/numerodia">{t('our Facebook page')}</a>.
+            <a href="https://www.facebook.com/numerodia">{t('the Facebook page')}</a>.
           </div>
         }
       </div>
