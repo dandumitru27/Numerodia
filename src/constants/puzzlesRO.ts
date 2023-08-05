@@ -466,7 +466,35 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'Titanicul putea transporta 2.400 de pasageri.'
   },
   {
+    question: 'Câte stațiuni sunt pe litoralul românesc?',
+    answer: 15
+  },
+  {
+    question: 'Acum câți ani și-a declarat Nigerul independența față de Franța?',
+    answer: 63
+  },
+  {
+    question: 'Ce procent a obținut PSD la alegerile parlamentare din 2020?',
+    answer: 29
+  },
+  {
+    question: 'Ce populație are oficial Bucureștiul? (rotunjită)',
+    answer: 1_700_000
+  },
+  {
     question: 'Câte țări sunt în Africa?',
     answer: 54
+  },
+  { // 2022-08-12
+    question: 'Ce distanță parcurge Dunărea pe teritoriul României, în kilometri? (rotunjită)',
+    answer: 1_000
+  },
+  {
+    question: 'Câte zile libere legale sunt în România în 2023?',
+    answer: 15
+  },
+  {
+    question: 'Câți oameni au murit în urma atacurilor din 11 septembrie 2011 din S.U.A.? (rotunjit)',
+    answer: 2_900
   },
 ]

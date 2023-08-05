@@ -65,7 +65,7 @@ export const puzzlesEN: Array<Puzzle> = [
     hint: 'The Titanic could carry 2,400 passengers.'
   },
   { // 2022-08-05
-    question: "How many drivers compete for the Formla 1 World Championship?",
+    question: "How many drivers compete for the Formula 1 World Championship?",
     answer: 20
   },
   {
@@ -79,5 +79,30 @@ export const puzzlesEN: Array<Puzzle> = [
   {
     question: "How old is Donald Trump?",
     answer: 77
+  },
+  {
+    question: "What's the distance on road between New York and Washington DC, in miles? (rounded)",
+    answer: 220
+  },
+  {
+    question: "What's the highest temperature ever recorded in the US, in degrees Fahrenheit? (rounded)",
+    answer: 130
+  },
+  {
+    question: "How many people have attended the Burning Man festival in 2022? (rounded)",
+    answer: 75_000,
+    hint: "In 2010, 51,000 people attended the festival."
+  },
+  { // 2022-08-12
+    question: "How many states are in the US?",
+    answer: 50
+  },
+  {
+    question: "What percent of the votes went in 2020 to Joe Biden?",
+    answer: 51
+  },
+  {
+    question: "How many episodes of the Black Mirror series have aired so far?",
+    answer: 27
   },
 ]
