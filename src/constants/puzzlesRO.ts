@@ -494,7 +494,36 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 15
   },
   {
+    question: 'Câți ani a domnit Ștefan cel Mare?',
+    answer: 47
+  },
+  {
+    question: 'Câte elemente cuprinde acum tabelul periodic al lui Mendeleev? (rotunjit)',
+    answer: 110
+  },
+  {
+    question: 'Câți kilometri sunt de la Brașov până la Sibiu? (rotunjit)',
+    answer: 140
+  },
+  {
+    question: 'Ce vârstă are cel mai longeviv arbore din lume? (rotunjită)',
+    answer: 5_000
+  },
+  {
+    question: 'Care e lungimea uzuală a unui teren de fotbal profesionist, în metri? (rotunjită)',
+    answer: 100
+  },
+  { // 2022-08-19
     question: 'Câți oameni au murit în urma atacurilor din 11 septembrie 2011 din S.U.A.? (rotunjit)',
     answer: 2_900
+  },
+  {
+    question: 'Ce lungime are Nilul, cel mai lung fluviu din lume, în kilometri? (rotunjită)',
+    answer: 6_600,
+    hint: 'Mississippi, al patrulea fluviu ca lungime, se întinde pe aproximativ 6.200 de kilometri.'
+  },
+  {
+    question: 'Câți ani are Klaus Iohannis?',
+    answer: 64
   },
 ]

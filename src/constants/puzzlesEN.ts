@@ -102,7 +102,36 @@ export const puzzlesEN: Array<Puzzle> = [
     answer: 51
   },
   {
+    question: "How many years ago was Hawaii admitted to the Union?",
+    answer: 63
+  },
+  {
     question: "How many episodes of the Black Mirror series have aired so far?",
     answer: 27
+  },
+  {
+    question: "What's the population of Los Angeles? (rounded)",
+    answer: 3_800_000,
+    hint: "The population of New York is about 8,800,000 people."
+  },
+  {
+    question: "How many U.S. bank holidays are in 2023?",
+    answer: 13
+  },
+  {
+    question: "How many people died in the September 11, 2011 attacks in the U.S.? (rounded)",
+    answer: 2_900
+  },
+  { // 2022-08-19
+    question: "How many countries are in South America?",
+    answer: 12
+  },
+  {
+    question: "How old is Leonardo DiCaprio?",
+    answer: 48
+  },
+  {
+    question: "How many shows are planned on Taylor Swift's The Eras Tour? (rounded)",
+    answer: 140
   },
 ]
