@@ -526,4 +526,32 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Câți ani are Klaus Iohannis?',
     answer: 64
   },
+  {
+    question: 'Câți ani au trecut între cele două războaie mondiale?',
+    answer: 20
+  },
+  {
+    question: 'Care este viteză luminii, în kilometri pe secundă?',
+    answer: 300_000
+  },
+  {
+    question: 'Câți jucători sunt într-o echipă de rugby?',
+    answer: 15
+  },
+  {
+    question: 'Ce populație are Cluj-Napoca?',
+    answer: 280_000
+  },
+  { // 2022-08-26
+    question: 'Ce înălțime are vârful Mont Blanc, cel mai înalt din Alpi, în metri?',
+    answer: 4_800
+  },
+  {
+    question: 'Câți pasageri poate transporta popularul avion A320, folosit și de Wizz Air?',
+    answer: 150
+  },
+  {
+    question: 'Câți ani a condus Napoleon Bonaparte Franța?',
+    answer: 14
+  },
 ]

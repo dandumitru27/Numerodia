@@ -134,4 +134,33 @@ export const puzzlesEN: Array<Puzzle> = [
     question: "How many shows are planned on Taylor Swift's The Eras Tour? (rounded)",
     answer: 140
   },
+  {
+    question: "How many years passed between World War I and World War II?",
+    answer: 20
+  },
+  {
+    question: "How many chemical elements are now in the periodic table? (rounded)",
+    answer: 110
+  },
+  {
+    question: "What's the population of Mexico? (rounded)",
+    answer: 120_000_000
+  },
+  {
+    question: "How long is the Nile, the longest river in the world, in miles? (rounded)",
+    answer: 4_100,
+    hint: "Mississippi, the fourth longest, is about 3,900 miles long."
+  },
+  { // 2022-08-26
+    question: "What's the speed of light, in miles per second? (rounded)",
+    answer: 180_000
+  },
+  {
+    question: "How many number-one singles in the US did Michael Jackson have?",
+    answer: 13
+  },
+  {
+    question: "How many players are in a rugby team?",
+    answer: 15
+  },
 ]
