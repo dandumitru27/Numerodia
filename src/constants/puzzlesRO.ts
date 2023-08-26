@@ -531,7 +531,7 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 20
   },
   {
-    question: 'Care este viteză luminii, în kilometri pe secundă?',
+    question: 'Care este viteza luminii, în kilometri pe secundă?',
     answer: 300_000
   },
   {
@@ -547,11 +547,41 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 4_800
   },
   {
-    question: 'Câți pasageri poate transporta popularul avion A320, folosit și de Wizz Air?',
-    answer: 150
+    question: 'Ce procent din populația lumii trăiește în Asia, aproximativ?',
+    answer: 59
   },
   {
     question: 'Câți ani a condus Napoleon Bonaparte Franța?',
     answer: 14
+  },
+  {
+    question: 'Care este recordul de viteză la 400 de metri, în secunde?',
+    answer: 43,
+    hint: 'Recordul la 100 de metri este de 9,5 secunde.'
+  },
+  {
+    question: 'Câte județe sunt în Transilvania?',
+    answer: 16
+  },
+  {
+    question: 'Câți pasageri poate transporta popularul avion Airbus A320, folosit și de Wizz Air?',
+    answer: 150
+  },
+  {
+    question: 'Câți kilometri sunt pe șosea între Mamaia și Vama Veche?',
+    answer: 63
+  },
+  { // 2022-09-02
+    question: 'Ce suprafață are Antarctica, în kilometri pătrați?',
+    answer: 14_000_000,
+    hint: 'Australia are o suprafață de 7.600.000 de kilometri pătrați.'
+  },
+  {
+    question: 'Câte țări au ieșire la Oceanul Indian?',
+    answer: 38
+  },
+  {
+    question: 'Acum câți ani a avut loc accidentul nuclear de la Fukushima?',
+    answer: 12
   },
 ]
