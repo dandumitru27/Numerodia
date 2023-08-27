@@ -196,7 +196,7 @@ export default function App() {
           setIsInfoModalOpen={setIsInfoModalOpen}
           setIsStatsModalOpen={setIsStatsModalOpen}
         />
-        <div className='h-16 flex items-center justify-center text-center font-bold text-slate-600 mt-2 px-3'>
+        <div className='h-16 flex items-center justify-center text-center font-bold text-lg text-slate-600 mt-2 px-3'>
           <span>
             <span onClick={() => openLargerTextModal(puzzle.question)}>{puzzle.question}</span>
             {puzzle.hint &&
