@@ -584,4 +584,32 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Acum câți ani a avut loc accidentul nuclear de la Fukushima?',
     answer: 12
   },
+  {
+    question: 'Ce procent din populația lumii trăiește în Africa?',
+    answer: 17
+  },
+  {
+    question: 'La ce vârstă a murit Adolf Hitler?',
+    answer: 56
+  },
+  {
+    question: 'Ce înălțime are vârful K2, al doilea din lume după Everest? (rotunjită)',
+    answer: 8_600
+  },
+  {
+    question: 'Ce viteză poate atinge cea mai rapidă mașină de serie din lume, Bugatti Veyron, în kilometri pe oră? (rotunjită)',
+    answer: 400
+  },
+  { // 2022-09-09
+    question: 'Câte țări au participat la Eurovision în 2023?',
+    answer: 37
+  },
+  {
+    question: 'Câte echipe joacă în faza grupelor în Liga Campionilor UEFA / Champions League?',
+    answer: 32
+  },
+  {
+    question: 'Ce latitudine, în grade, are cel mai nordic punct din România?',
+    answer: 48
+  },
 ]
