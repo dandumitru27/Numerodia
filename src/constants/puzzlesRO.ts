@@ -605,11 +605,39 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 37
   },
   {
-    question: 'Câte echipe joacă în faza grupelor în Liga Campionilor UEFA / Champions League?',
+    question: 'Câte echipe joacă în faza grupelor în UEFA Champions League?',
     answer: 32
   },
   {
     question: 'Ce latitudine, în grade, are cel mai nordic punct din România?',
     answer: 48
+  },
+  {
+    question: 'Câte zile a avut luna februarie în anul 1900?',
+    answer: 28
+  },
+  {
+    question: 'Din câte state erau compuse S.U.A. atunci când și-au declarat independența?',
+    answer: 13
+  },
+  {
+    question: 'Ce greutate are ultimul model de Dacia Logan, lansat în 2020, în kilograme? (rotunjită)',
+    answer: 1_100
+  },
+  {
+    question: 'Câți kilometri sunt, pe șosea, de la Timișoara până la Constanța? (rotunjit)',
+    answer: 770
+  },
+  { // 2022-09-16
+    question: 'Care e lățimea minimă a strâmtorii Gibraltar, ce separă Oceanul Atlantic de Marea Mediterană, în kilometri?',
+    answer: 13
+  },
+  {
+    question: 'Pe ce poziție este România în lume, după Produsul Intern Brut, din cele 213 țări?',
+    answer: 45
+  },
+  {
+    question: 'Câți ani a fost Nicolae Ceaușescu secretarul general al PCR?',
+    answer: 24
   },
 ]
