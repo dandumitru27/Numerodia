@@ -6,19 +6,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 43
   },
   {
-    question: 'Câți kilometri are Autostrada Soarelui, București - Constanța? (rotunjit)',
-    answer: 200
-  },
-  {
-    question: 'Câți membri are Parlamentul României? (rotunjit)',
-    answer: 460,
-    hint: 'Referendumul din 2009 propunea un număr maxim de 300 de parlamentari.',
-  },
-  { // 2022-04-22
-    question: 'Câți ani are Vladimir Putin?',
-    answer: 70
-  },
-  {
     question: 'Câți kilometri sunt de la Buda la Vadu Roșca, pe șosea? (rotunjit)',
     answer: 130
   },
@@ -638,6 +625,35 @@ export const puzzlesRO: Array<Puzzle> = [
   },
   {
     question: 'Câți ani a fost Nicolae Ceaușescu secretarul general al PCR?',
+    answer: 24
+  },
+  {
+    question: 'Câți membri are Parlamentul României? (rotunjit)',
+    answer: 460,
+    hint: 'Referendumul din 2009 propunea un număr maxim de 300 de parlamentari.',
+  },
+  {
+    question: 'În ce zi din iulie este Ziua națională a Franței, Căderea Bastiliei?',
+    answer: 14
+  },
+  {
+    question: 'Câți kilometri are Autostrada Soarelui, București - Constanța? (rotunjit)',
+    answer: 200
+  },
+  {
+    question: 'Câți ani a existat Imperiul Roman, până la împărțirea din anul 395? (rotunjit)',
+    answer: 420
+  },
+  { // 2022-09-23
+    question: 'Ce procent dintre belgieni vorbesc olandeza nativ? (estimativ)',
+    answer: 59
+  },
+  { // originally on April 22
+    question: 'Câți ani are Vladimir Putin?',
+    answer: 70
+  },
+  {
+    question: 'Câți ani studiază un medic neurochirurg? (inclusiv școală primară, gimnazială și liceu)',
     answer: 24
   },
 ]
