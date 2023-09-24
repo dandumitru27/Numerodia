@@ -28,15 +28,7 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 600_000,
     hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
   },
-  {
-    question: 'Din câte state sunt alcătuite Statele Unite ale Americii?',
-    answer: 50
-  },
-  { // 2022-04-29
-    question: 'Cât costă un gram de aur, în lei? (rotunjit)',
-    answer: 280
-  },
-  {
+  { // 2022-04-30
     question: 'Ce avere are Bernard Arnault, cel mai bogat om din lume, în miliarde de dolari? (rotunjită)',
     answer: 230
   },
@@ -48,10 +40,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți oameni au murit de COVID-19, în toată lumea? (rotunjit)',
     answer: 6_800_000
-  },
-  {
-    question: 'Ce procent din consumul de energie electrică al României e furnizat, în medie, de centrala nucleară de la Cernavodă?',
-    answer: 20
   },
   {
     question: 'Care este vârsta medie în Africa?',
@@ -654,6 +642,34 @@ export const puzzlesRO: Array<Puzzle> = [
   },
   {
     question: 'Câți ani studiază un medic neurochirurg? (inclusiv școală primară, gimnazială și liceu)',
+    answer: 24
+  },
+  {
+    question: 'Din câte state sunt alcătuite Statele Unite ale Americii?',
+    answer: 50
+  },
+  {
+    question: 'Ce lungime are Marele Zid Chinezesc, în kilometri? (rotunjită)',
+    answer: 21_000
+  },
+  {
+    question: 'Cât costă un gram de aur, în lei? (rotunjit)',
+    answer: 280
+  },
+  {
+    question: 'Ce procent dintre elvețieni vorbesc nativ franceza?',
+    answer: 22
+  },
+  { // 2022-09-30
+    question: 'De câte ori e mai mare suprafața Rusiei decât a Ucrainei?',
+    answer: 28
+  },
+  { // originally on May 3
+    question: 'Ce procent din consumul de energie electrică al României e furnizat, în medie, de centrala nucleară de la Cernavodă?',
+    answer: 20
+  },
+  {
+    question: 'Câte titluri de Grand Slam a câștigat Novak Djokovic?',
     answer: 24
   },
 ]
