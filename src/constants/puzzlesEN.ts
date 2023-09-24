@@ -1,23 +1,9 @@
 import Puzzle from "../models/puzzle";
 
 export const puzzlesEN: Array<Puzzle> = [
-  { // 2022-07-22
-    question: "How many views did The Lincoln Lawyer: Season 2, Netflix's top series, have last week globally? (rounded)",
-    answer: 8_300_000,
-    hint: "The Witcher: Season 3 came second, with 6.7 million views."
-  },
   {
     question: "How many member states are in the United Nations (UN)? (rounded)",
     answer: 190
-  },
-  {
-    question: "What's the current net worth of Elon Musk, the second whealthiest man on the planet, in billion U.S. dollars? (rounded)",
-    answer: 230,
-    hint: "Bill Gates is on the fifth place with 120 billion U.S. dollars."
-  },
-  {
-    question: "How old is Vladimir Putin?",
-    answer: 70
   },
   {
     question: "What's the population of the United States? (rounded)",
@@ -42,17 +28,8 @@ export const puzzlesEN: Array<Puzzle> = [
     answer: 13_000
   },
   {
-    question: "How many years ago was the first Barbie doll launched?",
-    answer: 64
-  },
-  {
     question: "What percent of the Earth's surface is convered by water?",
     answer: 70
-  },
-  {
-    question: "How much is Apple, the biggest company in the world by market cap, worth, in billion U.S. dollars? (rounded)",
-    answer: 3_000,
-    hint: 'Amazon is the fifth biggest, with 1,300 billion U.S. dollars.'
   },
   {
     question: "What's the population of New York? (rounded)",
@@ -69,29 +46,12 @@ export const puzzlesEN: Array<Puzzle> = [
     answer: 20
   },
   {
-    question: "For how long, in years, has Israel been an independent country?",
-    answer: 75
-  },
-  {
     question: "What percent of the U.S. population is Christian?",
     answer: 63,
   },
   {
-    question: "How old is Donald Trump?",
-    answer: 77
-  },
-  {
     question: "What's the distance on road between New York and Washington DC, in miles? (rounded)",
     answer: 220
-  },
-  {
-    question: "What's the highest temperature ever recorded in the US, in degrees Fahrenheit? (rounded)",
-    answer: 130
-  },
-  {
-    question: "How many people have attended the Burning Man festival in 2022? (rounded)",
-    answer: 75_000,
-    hint: "In 2010, 51,000 people attended the festival."
   },
   { // 2022-08-12
     question: "How many states are in the US?",
@@ -100,14 +60,6 @@ export const puzzlesEN: Array<Puzzle> = [
   {
     question: "What percent of the votes went in 2020 to Joe Biden?",
     answer: 51
-  },
-  {
-    question: "How many years ago was Hawaii admitted to the Union?",
-    answer: 63
-  },
-  {
-    question: "How many episodes of the Black Mirror series have aired so far?",
-    answer: 27
   },
   {
     question: "What's the population of Los Angeles? (rounded)",
@@ -125,14 +77,6 @@ export const puzzlesEN: Array<Puzzle> = [
   { // 2022-08-19
     question: "How many countries are in South America?",
     answer: 12
-  },
-  {
-    question: "How old is Leonardo DiCaprio?",
-    answer: 48
-  },
-  {
-    question: "How many shows are planned on Taylor Swift's The Eras Tour? (rounded)",
-    answer: 140
   },
   {
     question: "How many years passed between World War I and World War II?",
