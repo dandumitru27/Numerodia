@@ -42,20 +42,8 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 6_800_000
   },
   {
-    question: 'Care este vârsta medie în Africa?',
-    answer: 19
-  },
-  {
     question: 'Care este viteza maximă atinsă vreodată de un elicopter, în kilometri pe oră? (rotunjită)',
     answer: 640
-  },
-  { // 2022-05-06
-    question: 'Câți ani a fost pe tron Elisabeta a II-a, regina Marii Britanii și a Irlandei de Nord?',
-    answer: 70
-  },
-  {
-    question: 'Ce lungime are un bazin olimpic, în metri?',
-    answer: 50
   },
   {
     question: 'Ce procent dintre români se declară creștini ortodocși?',
@@ -671,5 +659,33 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câte titluri de Grand Slam a câștigat Novak Djokovic?',
     answer: 24
+  },
+  {
+    question: 'Câți ani a trăit Ion Creangă?',
+    answer: 52
+  },
+  { // originally on May 7
+    question: 'Ce lungime are un bazin olimpic, în metri?',
+    answer: 50
+  },
+  {
+    question: 'Care este viteza maximă a unei mașini Dacia Logan, în kilometri pe oră? (rotunjită)',
+    answer: 180
+  },
+  {
+    question: 'Care este vârsta medie în Africa?',
+    answer: 19
+  },
+  { // 2022-10-07
+    question: 'Ce înălțime are Burj Khalifa din Dubai, cea mai înaltă clădire din lume, în metri? (rotunjită)',
+    answer: 820
+  },
+  {
+    question: 'Câți ani a fost pe tron Elisabeta a II-a, regina Marii Britanii și a Irlandei de Nord?',
+    answer: 70
+  },
+  {
+    question: 'În câte țări este Euro moneda oficială?',
+    answer: 20
   },
 ]
