@@ -46,20 +46,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 640
   },
   {
-    question: 'Ce procent dintre români se declară creștini ortodocși?',
-    answer: 73
-  },
-  {
-    question: 'Câți ani are Joe Biden, președintele S.U.A.?',
-    answer: 80,
-    hint: 'Vladimir Putin are 70 de ani.'
-  },
-  {
-    question: 'Care este populația Uniunii Europene? (rotunjită)',
-    answer: 440_000_000,
-    hint: 'Populația S.U.A. este de 330 de milioane.',
-  },
-  {
     question: 'Câte insule locuite are Grecia? (rotunjit)',
     answer: 220
   },
@@ -685,7 +671,37 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 70
   },
   {
+    question: 'Acum câți ani a preluat Hamas controlul asupra Fâșiei Gaza?',
+    answer: 16
+  },
+  {
+    question: 'Cât este salariul lunar brut al președintelui României, în lei?',
+    answer: 25_000
+  },
+  {
+    question: 'Ce procent dintre români se declară creștini ortodocși?',
+    answer: 73
+  },
+  {
     question: 'În câte țări este Euro moneda oficială?',
     answer: 20
+  },
+  { // originally on May 10
+    question: 'Care este populația Uniunii Europene? (rotunjită)',
+    answer: 440_000_000,
+    hint: 'Populația S.U.A. este de 330 de milioane.',
+  },
+  { // 2022-10-14
+    question: 'Câți ani are Joe Biden, președintele S.U.A.?',
+    answer: 80,
+    hint: 'Vladimir Putin are 70 de ani.'
+  },
+  {
+    question: 'Câte țări sunt în Asia?',
+    answer: 49
+  },
+  {
+    question: 'Care a fost în 2022 salariul mediu lunar brut în Uniunea Europeană, în euro? (rotunjit)',
+    answer: 2_300
   },
 ]
