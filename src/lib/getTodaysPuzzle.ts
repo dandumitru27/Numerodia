@@ -3,7 +3,7 @@ import { puzzlesRO } from '../constants/puzzlesRO';
 import { puzzlesEN } from "../constants/puzzlesEN";
 import i18next from 'i18next';
 
-const firstGameDateRO = new Date(2023, 4, 1); // 4 is May
+const firstGameDateRO = new Date(2023, 5, 12); // 5 is June
 const firstGameDateEN = new Date(2023, 6, 22); // 6 is July
 
 export default function getTodaysPuzzle() {

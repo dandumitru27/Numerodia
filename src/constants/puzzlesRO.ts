@@ -15,10 +15,6 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'În 1989 era de 23 de milioane.',
   },
   {
-    question: 'Acum câți ani a fost cedat Hong Kong-ul Chinei?',
-    answer: 25
-  },
-  {
     question: 'La ce distanță orbitează Luna în jurul Pământului, în kilometri? (rotunjită)',
     answer: 380_000,
     hint: 'E aproximativ de 30 de ori diametrul Pământului. Distanța rutieră între Paris și Beijing este de 10.300 de kilometri.',
@@ -27,10 +23,6 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Ce suprafață are Ucraina, în kilometri pătrați? (rotunjită)',
     answer: 600_000,
     hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
-  },
-  { // 2022-04-30
-    question: 'Ce avere are Bernard Arnault, cel mai bogat om din lume, în miliarde de dolari? (rotunjită)',
-    answer: 230
   },
   {
     question: 'Ce suprafață are Rusia, în kilometri pătrați? (rotunjită)',
@@ -58,10 +50,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 190
   },
   {
-    question: 'De câți ani este la putere Recep Erdogan în Turcia, întâi ca prim-ministru și apoi ca președinte?',
-    answer: 20
-  },
-  {
     question: 'Câte restaurante McDonald\'s sunt în România?',
     answer: 96
   },
@@ -71,16 +59,8 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
   },
   {
-    question: 'Care este vârsta de pensionare în Franța?',
-    answer: 62
-  },
-  {
     question: 'Ce procent din populația Republicii Moldova se declară moldoveni sau români (și nu ruși, găgăuzi, ucraineni, etc.)?',
     answer: 82
-  },
-  {
-    question: 'Care a fost salariul mediu net în România în luna martie, în lei? (rotunjit)',
-    answer: 4_500
   },
   { // 2022-05-20
     question: 'Care este distanța maximă, în kilometri, pe care o poate parcurge fără reîncărcare mașina electrică Tesla Model S? (rotunjit)',
@@ -89,11 +69,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Ce populație are orașul Bacău, conform recensământului din 2022? (rotunjită)',
     answer: 130_000
-  },
-  {
-    question: 'Cât valorează Apple, cea mai mare corporație publică din lume după capitalizarea de piață, în miliarde de dolari? (rotunjit)',
-    answer: 2_700,
-    hint: 'Amazon e pe locul 5 cu 1.100 de miliarde de dolari.'
   },
   {
     question: 'Câte titluri WTA a câștigat Simona Halep?',
@@ -108,22 +83,9 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 8_800,
     hint: 'Vârful Mont Blanc, cel mai înalt din Alpi, are 4.810 metri.'
   },
-  {
-    question: 'Acum câți ani a intrat în funcțiune metroul din București?',
-    answer: 43
-  },
   { // 2022-05-27
     question: 'Câți kilometri sunt pe șosea între Iași și Chișinău? (rotunjit)',
     answer: 150
-  },
-  {
-    question: 'Câți ani avea Tina Turner?',
-    answer: 83
-  },
-  {
-    question: 'Care e salariul mediu net în învățământul din România, în lei? (rotunjit)',
-    answer: 4_000,
-    hint: 'Salariul mediu net în România, pe toate profesiile, e de aproximativ 4500 de lei.'
   },
   {
     question: 'Ce distanță oficială are un maraton, în kilometri? (doar partea întreagă)',
@@ -138,29 +100,12 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 16
   },
   {
-    question: 'Ce cotă de piață a avut Dacia în România în primul trimestru din 2023? (procent)',
-    answer: 33
-  },
-  { // 2022-06-03
-    question: 'Acum câți ani a fost înființat Colegiul "Ferdinand I" din Bacău? (rotunjit)',
-    answer: 150
-  },
-  {
     question: 'Câți oameni a pierdut Rusia în Al Doilea Război Mondial, atât militari cât și civili? (rotunjit)',
     answer: 27_000_000
   },
   {
     question: 'Pe câți ani se poate face maxim un credit ipotecar în România?',
     answer: 35
-  },
-  {
-    question: 'Câți ani are Klaus Iohannis?',
-    answer: 63
-  },
-  {
-    question: 'Câți utilizatori activi are Facebook, în toată lumea? (rotunjit)',
-    answer: 2_900_000_000,
-    hint: 'Populația lumii e de 8 miliarde de oameni.'
   },
   {
     question: 'Câte state membre sunt în Uniunea Europeană?',
@@ -200,10 +145,6 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Câte țări sunt în NATO?',
     answer: 31
   },
-  { // 2022-06-17
-    question: 'Câți ani are Leonardo DiCaprio?',
-    answer: 48
-  },
   {
     question: 'Ce populație are orașul Brașov, conform recensământului din 2022? (rotunjită)',
     answer: 230_000
@@ -229,22 +170,6 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Care este temperatura maximă înregistrată vreodată în România, în grade Celsius?',
     answer: 44
   },
-  { // 2022-06-24
-    question: 'Care este salariul minim net în România, în lei? (rotunjit)',
-    answer: 1_800
-  },
-  {
-    question: 'Câți mercenari avea în decembrie 2022 Gruparea Wagner din Rusia, aproximativ?',
-    answer: 50_000
-  },
-  {
-    question: 'La ce adâncime sub nivelul mării e scufundat Titanicul, în metri?',
-    answer: 3_700
-  },
-  {
-    question: 'Câți ani are Florin Piersic?',
-    answer: 87
-  },
   {
     question: 'Câte magazine Dedeman sunt în România?',
     answer: 59
@@ -254,18 +179,9 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 130_000,
     hint: 'România are o suprafață de 238.000 de kilometri pătrați.'
   },
-  {
-    question: 'Câți români sunt stabiliți în Germania, după ultima estimare din 2021? (rotunjit)',
-    answer: 840_000,
-    hint: 'În Spania era estimat în 2021 că sunt stabiliți 550.000 de români.'
-  },
   { // 2022-07-01
     question: 'Câți ani a durat Războiul Rece?',
     answer: 44
-  },
-  {
-    question: 'Acum câți ani a fost fondată Universitatea "Vasile Alecsandri" din Bacău?',
-    answer: 62
   },
   {
     question: 'Ce lungime au granițele României, în kilometri? (rotunjită)',
@@ -274,10 +190,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Anul acesta e estimat că populația Indiei a depășit-o pe cea a Chinei. Care e populația estimată a Indiei acum? (rotunjită)',
     answer: 1_400_000_000
-  },
-  {
-    question: 'Cât costă cel mai scump telefon iPhone, 14 Pro Max de 1TB, în lei?',
-    answer: 9_200
   },
   {
     question: 'Câți kilometri are celebrul drum Route 66 din Statele Unite ale Americii? (rotunjit)',
@@ -296,17 +208,9 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 53
   },
   {
-    question: 'Care a fost rata de promovare la Bacalaureatul din 2023, procentual?',
-    answer: 75
-  },
-  {
     question: 'Care e lungimea ecuatorului în jurul Pământului, în kilometri? (rotunjită)',
     answer: 40_000,
     hint: 'Distanța rutieră între Paris și Beijing este de 10.300 de kilometri.'
-  },
-  {
-    question: 'Cât este alocația lunară în România pentru copiii între 2 și 18 ani, în lei? (rotunjită)',
-    answer: 250
   },
   {
     question: 'Din câte republici sovietice era constituită URSS, înainte de dezmembrare?',
@@ -315,11 +219,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câte locuințe s-au prăbușit în România din cauza cutremului din 1977? (rotunjit)',
     answer: 35_000
-  },
-  { // 2022-07-15
-    question: 'Câți pensionari sunt în România? (rotunjit)',
-    answer: 4_700_000,
-    hint: 'Populația totală a României este de aproximativ 19 milioane.'
   },
   {
     question: 'În România sunt doar două autostrăzi date integral în folosință, A2 și A10. Câți kilometri are A10, Sebeș - Turda?',
@@ -334,21 +233,8 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 1_200_000
   },
   {
-    question: 'Câți ani are Céline Dion?',
-    answer: 55
-  },
-  {
-    question: 'Care este prețul de pornire a unei mașini electrice Dacia Spring, în Euro? (rotunjit)',
-    answer: 20_000
-  },
-  {
     question: 'Ce lungime are podul suspendat peste Dunăre de la Brăila, inaugurat în 2023, în metri?',
     answer: 1_900
-  },
-  { // 2022-07-22
-    question: 'Câte albume a vândut Elvis Presley? (rotunjit)',
-    answer: 160_000_000,
-    hint: 'The Beatles au vândut 230 de milioane de albume.'
   },
   {
     question: 'Ce procent din suprafața Pământului este acoperit cu apă?',
@@ -372,21 +258,9 @@ export const puzzlesRO: Array<Puzzle> = [
     hint: 'Italia are o populație de 58 de milioane.'
   },
   {
-    question: 'De câți ani este Israel o țară independentă?',
-    answer: 75
-  },
-  { // 2022-07-29
-    question: 'Câți piloți participă în ediția actuală a campionatului de Formula 1?',
-    answer: 20
-  },
-  {
     question: 'Ce suprafață are Groenlanda, în kilometri pătrați? (rotunjită)',
     answer: 2_100_000,
     hint: 'Vecina Islanda are o suprafață de 102.000 de kilometri pătrați.'
-  },
-  {
-    question: "Acum câți ani a fost lansată prima păpușă Barbie?",
-    answer: 64
   },
   {
     question: 'Care este temperatura maximă înregistrată vreodată în Grecia, în grade Celsius?',
@@ -397,17 +271,8 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 17
   },
   {
-    question: 'Câți oameni au participat la festivalul Untold în 2022? (rotunjit)',
-    answer: 360_000,
-    hint: 'La festivalul Electric Castle au participat 270.000 de oameni în 2022.'
-  },
-  {
     question: 'Câte județe sunt în România?',
     answer: 41
-  },
-  { // 2022-08-05
-    question: 'Câți ani are Donald Trump, fostul președinte al S.U.A.?',
-    answer: 77
   },
   {
     question: 'Câți pasageri poate transporta Wonder of the Seas, cea mai mare navă de croazieră din lume? (rotunjit)',
@@ -417,10 +282,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câte stațiuni sunt pe litoralul românesc?',
     answer: 15
-  },
-  {
-    question: 'Acum câți ani și-a declarat Nigerul independența față de Franța?',
-    answer: 63
   },
   {
     question: 'Ce procent a obținut PSD la alegerile parlamentare din 2020?',
@@ -439,10 +300,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 1_000
   },
   {
-    question: 'Câte zile libere legale sunt în România în 2023?',
-    answer: 15
-  },
-  {
     question: 'Câți ani a domnit Ștefan cel Mare?',
     answer: 47
   },
@@ -453,10 +310,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți kilometri sunt de la Brașov până la Sibiu? (rotunjit)',
     answer: 140
-  },
-  {
-    question: 'Ce vârstă are cel mai longeviv arbore din lume? (rotunjită)',
-    answer: 5_000
   },
   {
     question: 'Care e lungimea uzuală a unui teren de fotbal profesionist, în metri? (rotunjită)',
@@ -470,10 +323,6 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Ce lungime are Nilul, cel mai lung fluviu din lume, în kilometri? (rotunjită)',
     answer: 6_600,
     hint: 'Mississippi, al patrulea fluviu ca lungime, se întinde pe aproximativ 6.200 de kilometri.'
-  },
-  {
-    question: 'Câți ani are Klaus Iohannis?',
-    answer: 64
   },
   {
     question: 'Câți ani au trecut între cele două războaie mondiale?',
@@ -530,10 +379,6 @@ export const puzzlesRO: Array<Puzzle> = [
     answer: 38
   },
   {
-    question: 'Acum câți ani a avut loc accidentul nuclear de la Fukushima?',
-    answer: 12
-  },
-  {
     question: 'Ce procent din populația lumii trăiește în Africa?',
     answer: 17
   },
@@ -548,10 +393,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Ce viteză poate atinge cea mai rapidă mașină de serie din lume, Bugatti Veyron, în kilometri pe oră? (rotunjită)',
     answer: 400
-  },
-  { // 2022-09-09
-    question: 'Câte țări au participat la Eurovision în 2023?',
-    answer: 37
   },
   {
     question: 'Câte echipe joacă în faza grupelor în UEFA Champions League?',
@@ -576,10 +417,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți kilometri sunt, pe șosea, de la Timișoara până la Constanța? (rotunjit)',
     answer: 770
-  },
-  { // 2022-09-16
-    question: 'Care e lățimea minimă a strâmtorii Gibraltar, ce separă Oceanul Atlantic de Marea Mediterană, în kilometri?',
-    answer: 13
   },
   {
     question: 'Pe ce poziție este România în lume, după Produsul Intern Brut, din cele 213 țări?',
@@ -610,10 +447,6 @@ export const puzzlesRO: Array<Puzzle> = [
     question: 'Ce procent dintre belgieni vorbesc olandeza nativ? (estimativ)',
     answer: 59
   },
-  { // originally on April 22
-    question: 'Câți ani are Vladimir Putin?',
-    answer: 70
-  },
   {
     question: 'Câți ani studiază un medic neurochirurg? (inclusiv școală primară, gimnazială și liceu)',
     answer: 24
@@ -625,10 +458,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Ce lungime are Marele Zid Chinezesc, în kilometri? (rotunjită)',
     answer: 21_000
-  },
-  {
-    question: 'Cât costă un gram de aur, în lei? (rotunjit)',
-    answer: 280
   },
   {
     question: 'Ce procent dintre elvețieni vorbesc nativ franceza?',
@@ -669,10 +498,6 @@ export const puzzlesRO: Array<Puzzle> = [
   {
     question: 'Câți ani a fost pe tron Elisabeta a II-a, regina Marii Britanii și a Irlandei de Nord?',
     answer: 70
-  },
-  {
-    question: 'Acum câți ani a preluat Hamas controlul asupra Fâșiei Gaza?',
-    answer: 16
   },
   {
     question: 'Cât este salariul lunar brut al președintelui României, în lei?',
