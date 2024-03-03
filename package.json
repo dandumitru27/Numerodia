@@ -24,6 +24,7 @@
     "ua-parser-js": "^1.0.35",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://dandumitru27.github.io/Numerodia/",
   "scripts": {
     "start": "react-scripts start",
     "predeploy" : "npm run build",
